@@ -1,0 +1,535 @@
+/**************************
+Table Of Content 
+**************************/
+/* 5. Typograpgy */
+* {
+  font-family: "ATC" !important;
+  font-weight: 400;
+}
+
+body {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong {
+  font-weight: 700;
+}
+
+h6 {
+  letter-spacing: -0.5px;
+}
+
+p {
+  letter-spacing: -0.15px;
+}
+
+@font-face {
+  font-family: "ATC";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""), url("./assets/fonts/ATCArquette-Black.woff") format("opentype");
+}
+@font-face {
+  font-family: "ATC";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("./assets/fonts/ATCArquette-Bold.woff") format("opentype");
+}
+@font-face {
+  font-family: "ATC";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("./assets/fonts/ATCArquette-SemiboldItalic.woff") format("opentype");
+}
+@font-face {
+  font-family: "ATC";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("./assets/fonts/ATCArquette-Medium.woff") format("opentype");
+}
+@font-face {
+  font-family: "ATC";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("./assets/fonts/ATCArquette-Regular.woff") format("opentype");
+}
+@font-face {
+  font-family: "ATC";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""), url("./assets/fonts/ATCArquette-Light.woff") format("opentype");
+}
+/*Convertion Ration sp to rem for html */
+/* 6. Header */
+header {
+  background-color: rgba(255, 246, 255, 0.9);
+}
+header nav {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  backdrop-filter: blur(20px);
+}
+header nav .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 6.25rem;
+}
+header nav .navbar .container .navbar-brand img {
+  height: 4rem;
+  width: 100%;
+}
+header nav .navbar .container .menu-primary-container .nav-links {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+header nav .navbar .container .menu-primary-container .nav-links .menu-item {
+  list-style: none;
+}
+header nav .navbar .container .menu-primary-container .nav-links .menu-item.current-menu-item a {
+  border-bottom: 2px solid #281232;
+}
+header nav .navbar .container .menu-primary-container .nav-links .menu-item a {
+  text-decoration: none;
+  padding: 0.625rem 0.3125rem 0.1875rem 0.3125rem;
+  margin: 0rem 0.625rem 0rem 0.625rem;
+  font-size: 1.125rem;
+  color: #281232;
+  font-weight: 500;
+}
+@media screen and (max-width: 555px) {
+  header nav .navbar .container .menu-primary-container .nav-links .menu-item a {
+    font-size: 2.25rem;
+  }
+}
+header nav .navbar .container .menu-primary-container .nav-links .menu-item.menu-item-has-children {
+  position: relative;
+}
+header nav .navbar .container .menu-primary-container .nav-links .menu-item.menu-item-has-children .sub-menu {
+  display: none;
+  position: absolute;
+  background-color: red;
+}
+header nav .navbar .container .menu-primary-container .nav-links .menu-item.menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
+header nav .navbar .container .menu-primary-container .nav-links .menu-item.menu-item-has-children:hover > .sub-menu a {
+  white-space: nowrap;
+}
+@media screen and (max-width: 555px) {
+  header nav .navbar .container .menu-primary-container .nav-links.nav-active {
+    width: 100%;
+  }
+}
+header nav .navbar .container .ham-burger {
+  display: none;
+  z-index: 999;
+}
+header nav .navbar .container .ham-burger .all-lines .line {
+  width: 25px;
+  height: 3px;
+  background-color: #281232;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  header nav .navbar .container .menu-primary-container .nav-links {
+    padding: 0;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff6ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+    z-index: 2;
+  }
+  header nav .navbar .container .menu-primary-container .nav-links.nav-active {
+    transform: translateX(0);
+  }
+  header nav .navbar .container .menu-primary-container .nav-links.nav-active .menu-item {
+    margin: 0.75rem 0rem 0.75rem 0rem;
+  }
+  header nav .navbar .container .ham-burger {
+    display: block;
+  }
+  header nav .navbar .container .ham-burger .all-lines.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: #231F20;
+  }
+  header nav .navbar .container .ham-burger .all-lines.toggle .line2 {
+    opacity: 0;
+  }
+  header nav .navbar .container .ham-burger .all-lines.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: #231F20;
+  }
+}
+header nav.header-sticky {
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+header nav.header-sticky .container {
+  min-height: 5.25rem;
+}
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn {
+  font-size: 1.3125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0.9375rem 1.75rem 0.9375rem 1.75rem;
+  border: none;
+}
+.btn.btn-primary {
+  background-color: #642e7c;
+  color: #ffffff;
+}
+
+.page--header {
+  padding: 10rem 0rem 6.25rem 0rem;
+  background-color: #fff6ff;
+  display: flex;
+  justify-content: center;
+}
+.page--header h1 {
+  background: linear-gradient(90deg, #642e7c, #ab397a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  letter-spacing: -0.1875rem;
+  font-size: 4.14375rem;
+  text-transform: capitalize;
+  padding: 0 1rem;
+}
+
+.pagination--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #642e7c;
+  margin: 2.5rem 0rem 1.25rem 0rem;
+}
+.pagination--container span {
+  width: 2rem;
+  height: 2rem;
+  background: #642e7c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  margin: 0 0.5rem;
+}
+
+.pagination--container > * {
+  margin: 0 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #642e7c;
+}
+.pagination--container > *:hover {
+  color: #ab397a;
+}
+
+.wp-block-embed iframe {
+  width: 100%;
+}
+
+.mfp-title {
+  text-align: center !important;
+  font-weight: 900;
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+}
+
+button.button {
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  font-weight: 500;
+  width: fit-content;
+  @apply rounded;
+}
+button.button.primary {
+  background-color: #231F20;
+  color: #ffffff;
+}
+button.button.ghost {
+  color: #231F20;
+  box-shadow: inset 0px 0px 0px 1px #231F20;
+}
+
+/* 7. Footer */
+footer#footer {
+  background-color: #281232;
+}
+footer#footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0rem 1.25rem 0rem;
+}
+footer#footer .container h1 {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 3.25rem;
+  margin: 0rem 0rem 1.25rem 0rem;
+  text-align: center;
+}
+footer#footer .container p {
+  color: #f1f0f2;
+  font-size: 1.375rem;
+  line-height: 140%;
+  text-align: center;
+  padding: 0 15rem;
+  margin: 0 0 2rem 0;
+}
+@media screen and (max-width: 991px) {
+  footer#footer .container p {
+    padding: 0 2rem;
+  }
+}
+footer#footer .container h5 {
+  font-size: 1.625rem;
+  color: #f1f0f2;
+  margin: 2.1875rem 0rem 0.9375rem 0rem;
+}
+footer#footer .container .social--icons {
+  margin: 0rem 0rem 1.25rem 0rem;
+}
+footer#footer .container .social--icons a {
+  margin: 0rem 0.3125rem 0rem 0.3125rem;
+}
+footer#footer .container .social--icons a img {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  object-fit: cover;
+}
+footer#footer .container .social--icons a img:hover {
+  transform: scale(1.1);
+}
+footer#footer .container a.btn-primary {
+  background-color: #ab397a;
+}
+footer#footer .container .social--icons {
+  display: flex;
+}
+footer#footer .container .copyright--section {
+  margin: 1.25rem 0rem 0.3125rem 0rem;
+}
+footer#footer .container .copyright--section p {
+  margin: 0;
+  font-size: 1.375rem;
+}
+footer#footer .container .author--section {
+  font-style: italic;
+  color: #867b8b;
+  font-size: 1.25rem;
+}
+footer#footer .container .author--section span {
+  color: #ab397a;
+}
+
+/* 8. Mediaquery */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+/* max-width starts */
+@media screen and (max-width: 1855px) {
+  :root {
+    font-size: 13.333px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  :root {
+    font-size: 12px;
+  }
+  .container {
+    max-width: 1080px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  :root {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 1155px) {
+  :root {
+    font-size: 8.6px;
+  }
+}
+@media screen and (max-width: 992px) {
+  :root {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 12.4px;
+  }
+}
+@media screen and (max-width: 400px) {
+  :root {
+    font-size: 10.5px;
+  }
+  .container {
+    width: 98%;
+  }
+}
+/* 9. Content */
+#featured-services {
+  position: relative;
+  height: 52rem;
+  @apply flex items-center;
+}
+#featured-services .container .card {
+  @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4 flex flex-col justify-center rounded-md h-60 cursor-pointer hover:scale-105;
+}
+
+#top-header {
+  @apply p-12;
+}
+#top-header .container {
+  @apply flex flex-col justify-center;
+}
+#top-header .container h5 {
+  @apply text-center text-2xl font-normal mb-2;
+}
+#top-header .container h2 {
+  @apply text-center font-extrabold text-4xl mb-1;
+}
+#top-header .container h6 {
+  @apply text-center text-xl italic;
+}
+
+#section-footer {
+  @apply mt-12 mb-40;
+  display: flex;
+  justify-content: center;
+}
+
+#offers .offers-content .card {
+  @apply flex items-center p-7 pl-8 cursor-pointer relative rounded-md;
+  width: 26.25rem;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.062745098);
+}
+#offers .offers-content .card:before {
+  @apply bg-primary absolute top-0 left-0 h-full w-4 rounded-l-md transition-all duration-500;
+  content: "";
+  z-index: -1;
+}
+#offers .offers-content .card:hover {
+  @apply scale-105;
+}
+#offers .offers-content .card:hover .book-now-icon {
+  @apply bg-white border-dark border-4;
+}
+#offers .offers-content .card:hover:before {
+  @apply w-full rounded-md;
+}
+#offers .offers-content .card h1 {
+  @apply text-3xl font-extrabold;
+}
+#offers .offers-content .card h2 {
+  @apply text-2xl underline underline-offset-4 mb-2;
+}
+#offers .offers-content .card h6 {
+  @apply text-base;
+  line-height: 120%;
+}
+#offers .offers-content .card .book-now-icon {
+  @apply bg-primary rounded-full w-20 h-20 flex justify-center items-center;
+}
+#offers .offers-content .card .book-now-icon h3 {
+  @apply text-center uppercase font-extrabold text-base;
+  line-height: 100%;
+}
+
+#why {
+  @apply relative;
+  height: 48.75rem;
+}
+#why .why-img {
+  @apply absolute top-0 left-0 h-full;
+  width: 44.0625rem;
+}
+#why .why-img::before {
+  @apply absolute top-0 left-0 w-full h-full;
+  content: "";
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 49.48%, #FFFFFF 100%);
+}
+#why .container {
+  @apply h-full;
+}
+#why .container .why-content #top-header {
+  @apply p-0 mb-8;
+}
+#why .container .why-content #top-header h5 {
+  @apply text-2xl font-normal;
+  letter-spacing: -0.5px;
+}
+#why .container .why-content #top-header h2 {
+  @apply text-5xl;
+  letter-spacing: -1.75px;
+}
+#why .container .why-content .grid .point {
+  @apply col-span-6;
+}
+#why .container .why-content .grid .point .icon {
+  @apply w-20 h-20 rounded-full border-dark border-2 p-2 flex justify-center items-center;
+}
+#why .container .why-content .grid .point h4 {
+  @apply text-3xl my-2;
+  letter-spacing: -0.75px;
+  line-height: 120%;
+}
+#why .container .why-content .grid .point p {
+  @apply text-lg;
+  line-height: 120%;
+}
+
+/*# sourceMappingURL=custom.css.map */

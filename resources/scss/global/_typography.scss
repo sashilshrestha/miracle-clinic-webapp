@@ -1,10 +1,10 @@
 * {
-	font-family: 'ATC' !important;
-	font-weight: 400;
+  font-family: 'ATC' !important;
+  font-weight: 400;
 }
 
 body {
-	font-size: 16px;
+  font-size: 16px;
 }
 h1,
 h2,
@@ -12,56 +12,61 @@ h3,
 h4,
 h5,
 strong {
-	font-weight: 700;
-	
+  font-weight: 700;
 }
-h6{
-	letter-spacing: -.5px;
+h6 {
+  letter-spacing: -0.5px;
 }
 
-p{
-	letter-spacing: -.15px;
+p {
+  letter-spacing: -0.15px;
 }
 
 // ATC
 @font-face {
-	font-family: "ATC";
-	font-style: normal;
-	font-weight: 900;
-	src: local(""), url("./assets/fonts/ATCArquette-Black.woff") format("opentype");
+  font-family: 'ATC';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+    url('../assets/fonts/ATCArquette-Black.woff') format('opentype');
 }
 
 @font-face {
-	font-family: "ATC";
-	font-style: normal;
-	font-weight: 700;
-	src: local(""), url("./assets/fonts/ATCArquette-Bold.woff") format("opentype");
+  font-family: 'ATC';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('../assets/fonts/ATCArquette-Bold.woff') format('opentype');
 }
 
 @font-face {
-	font-family: "ATC";
-	font-style: normal;
-	font-weight: 600;
-	src: local(""), url("./assets/fonts/ATCArquette-SemiboldItalic.woff") format("opentype");
+  font-family: 'ATC';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+    url('../assets/fonts/ATCArquette-SemiboldItalic.woff') format('opentype');
 }
 
 @font-face {
-	font-family: "ATC";
-	font-style: normal;
-	font-weight: 500;
-	src: local(""), url("./assets/fonts/ATCArquette-Medium.woff") format("opentype");
+  font-family: 'ATC';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+    url('../assets/fonts/ATCArquette-Medium.woff') format('opentype');
 }
 
 @font-face {
-	font-family: "ATC";
-	font-style: normal;
-	font-weight: 400;
-	src: local(""), url("./assets/fonts/ATCArquette-Regular.woff") format("opentype");
+  font-family: 'ATC';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../assets/fonts/ATCArquette-Regular.woff') format('opentype');
 }
 
 @font-face {
-	font-family: "ATC";
-	font-style: normal;
-	font-weight: 300;
-	src: local(""), url("./assets/fonts/ATCArquette-Light.woff") format("opentype");
+  font-family: 'ATC';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+    url('../assets/fonts/ATCArquette-Light.woff') format('opentype');
 }

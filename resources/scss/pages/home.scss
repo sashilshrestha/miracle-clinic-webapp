@@ -3,24 +3,24 @@
   // padding: 18rem 0;
   height: 52rem;
   @apply flex items-center;
-  .container {    
+  .container {
     .card {
-      @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4 flex flex-col justify-center rounded-md h-60 cursor-pointer hover:scale-105;      
+      @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4 flex flex-col justify-center rounded-md h-60 cursor-pointer hover:scale-105;
     }
-  }  
+  }
 }
 
 #top-header {
   @apply p-12;
   .container {
     @apply flex flex-col justify-center;
-    h5{
+    h5 {
       @apply text-center text-2xl font-normal mb-2;
     }
-    h2{
+    h2 {
       @apply text-center font-extrabold text-4xl mb-1;
     }
-    h6{
+    h6 {
       @apply text-center text-xl italic;
     }
   }
@@ -32,66 +32,71 @@
   justify-content: center;
 }
 
-#services { 
+#services {
   .services-content {
     .card {
-      // @apply relative rounded-lg h-96 flex flex-col items-center justify-end p-7;    
-      // box-shadow: 0px 4px 25px 0px #00000010;
-      // h2 {
-      //   @apply text-3xl font-bold text-center;
-      // }
-      // h6 {
-      //   @apply text-xl text-center;
-      // }  
-      // .overlay {
-      //   @apply absolute top-0 left-0 w-full h-full;
-      //   background: linear-gradient(180deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.84) 61.98%, #FFFFFF 100%);
-      //   z-index: -1;
-      // }
-      // img{
-      //   z-index: -2;
-      //   border-radius: inherit;
-      // }
+      @apply relative rounded-lg h-96 flex flex-col items-center justify-end p-7;
+      box-shadow: 0px 4px 25px 0px #00000010;
+      h2 {
+        @apply text-3xl font-bold text-center;
+      }
+      h6 {
+        @apply text-xl text-center;
+      }
+      .overlay {
+        @apply absolute top-0 left-0 w-full h-full;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.29) 0%,
+          rgba(255, 255, 255, 0.84) 61.98%,
+          #ffffff 100%
+        );
+        z-index: -1;
+      }
+      img {
+        z-index: -2;
+        border-radius: inherit;
+      }
     }
   }
 }
 
 #offers {
   .offers-content {
-    .card{
+    .card {
       @apply flex items-center p-7 pl-8 cursor-pointer relative rounded-md;
       @include width(420);
       box-shadow: 0px 4px 25px 0px #00000010;
-      &:before{
+      &:before {
         @apply bg-primary absolute top-0 left-0 h-full w-4 rounded-l-md transition-all duration-500;
         content: '';
         z-index: -1;
       }
       &:hover {
         @apply scale-105;
-        .book-now-icon {          
-            @apply bg-white border-dark border-4;          
+        .book-now-icon {
+          @apply bg-white border-dark border-4;
         }
       }
-      &:hover:before{
+      &:hover:before {
         @apply w-full rounded-md;
       }
       h1 {
         @apply text-3xl font-extrabold;
       }
-      h2{
+      h2 {
         @apply text-2xl underline underline-offset-4 mb-2;
       }
-      h6{
+      h6 {
         @apply text-base;
-        line-height: 120%
+        line-height: 120%;
       }
       .book-now-icon {
         @apply bg-primary rounded-full w-20 h-20 flex justify-center items-center;
-        h3{
+        h3 {
           @apply text-center uppercase font-extrabold text-base;
           line-height: 100%;
-        }       
+        }
       }
     }
   }
@@ -100,13 +105,18 @@
 #why {
   @apply relative;
   @include height(780);
-  .why-img{
+  .why-img {
     @apply absolute top-0 left-0 h-full;
     @include width(705);
     &::before {
       @apply absolute top-0 left-0 w-full h-full;
       content: '';
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 49.48%, #FFFFFF 100%);
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 49.48%,
+        #ffffff 100%
+      );
     }
   }
   .container {
@@ -114,27 +124,27 @@
     .why-content {
       #top-header {
         @apply p-0 mb-8;
-        h5{
+        h5 {
           @apply text-2xl font-normal;
-          letter-spacing: -.5px
+          letter-spacing: -0.5px;
         }
-        h2{
+        h2 {
           @apply text-5xl;
           letter-spacing: -1.75px;
-        }        
+        }
       }
       .grid {
         .point {
           @apply col-span-6;
           .icon {
-            @apply  w-20 h-20 rounded-full border-dark border-2 p-2 flex justify-center items-center;
+            @apply w-20 h-20 rounded-full border-dark border-2 p-2 flex justify-center items-center;
           }
-          h4{
+          h4 {
             @apply text-3xl my-2;
-            letter-spacing: -.75px;
-            line-height: 120%
+            letter-spacing: -0.75px;
+            line-height: 120%;
           }
-          p{
+          p {
             @apply text-lg;
             line-height: 120%;
           }

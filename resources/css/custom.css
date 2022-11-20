@@ -32,37 +32,37 @@ p {
   font-family: "ATC";
   font-style: normal;
   font-weight: 900;
-  src: local(""), url("./assets/fonts/ATCArquette-Black.woff") format("opentype");
+  src: local(""), url("../assets/fonts/ATCArquette-Black.woff") format("opentype");
 }
 @font-face {
   font-family: "ATC";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("./assets/fonts/ATCArquette-Bold.woff") format("opentype");
+  src: local(""), url("../assets/fonts/ATCArquette-Bold.woff") format("opentype");
 }
 @font-face {
   font-family: "ATC";
   font-style: normal;
   font-weight: 600;
-  src: local(""), url("./assets/fonts/ATCArquette-SemiboldItalic.woff") format("opentype");
+  src: local(""), url("../assets/fonts/ATCArquette-SemiboldItalic.woff") format("opentype");
 }
 @font-face {
   font-family: "ATC";
   font-style: normal;
   font-weight: 500;
-  src: local(""), url("./assets/fonts/ATCArquette-Medium.woff") format("opentype");
+  src: local(""), url("../assets/fonts/ATCArquette-Medium.woff") format("opentype");
 }
 @font-face {
   font-family: "ATC";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("./assets/fonts/ATCArquette-Regular.woff") format("opentype");
+  src: local(""), url("../assets/fonts/ATCArquette-Regular.woff") format("opentype");
 }
 @font-face {
   font-family: "ATC";
   font-style: normal;
   font-weight: 300;
-  src: local(""), url("./assets/fonts/ATCArquette-Light.woff") format("opentype");
+  src: local(""), url("../assets/fonts/ATCArquette-Light.woff") format("opentype");
 }
 /*Convertion Ration sp to rem for html */
 /* 6. Header */
@@ -452,6 +452,26 @@ footer#footer .container .author--section span {
   justify-content: center;
 }
 
+#services .services-content .card {
+  @apply relative rounded-lg h-96 flex flex-col items-center justify-end p-7;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.062745098);
+}
+#services .services-content .card h2 {
+  @apply text-3xl font-bold text-center;
+}
+#services .services-content .card h6 {
+  @apply text-xl text-center;
+}
+#services .services-content .card .overlay {
+  @apply absolute top-0 left-0 w-full h-full;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.84) 61.98%, #ffffff 100%);
+  z-index: -1;
+}
+#services .services-content .card img {
+  z-index: -2;
+  border-radius: inherit;
+}
+
 #offers .offers-content .card {
   @apply flex items-center p-7 pl-8 cursor-pointer relative rounded-md;
   width: 26.25rem;
@@ -500,7 +520,7 @@ footer#footer .container .author--section span {
 #why .why-img::before {
   @apply absolute top-0 left-0 w-full h-full;
   content: "";
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 49.48%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 49.48%, #ffffff 100%);
 }
 #why .container {
   @apply h-full;

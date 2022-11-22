@@ -75,7 +75,8 @@
       &:hover {
         @apply scale-105;
         .book-now-icon {
-          @apply bg-white border-dark border-4;
+          @apply bg-white border-dark border-2;
+          border-style: dashed;
         }
       }
       &:hover:before {

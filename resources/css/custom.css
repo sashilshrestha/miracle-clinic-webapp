@@ -181,10 +181,7 @@ header nav .navbar .container .ham-burger .all-lines .line {
 }
 header nav.header-sticky {
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
-  background-color: rgba(255, 255, 255, 0.4);
-}
-header nav.header-sticky .container {
-  min-height: 5.25rem;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -486,7 +483,8 @@ footer#footer .container .author--section span {
   @apply scale-105;
 }
 #offers .offers-content .card:hover .book-now-icon {
-  @apply bg-white border-dark border-4;
+  @apply bg-white border-dark border-2;
+  border-style: dashed;
 }
 #offers .offers-content .card:hover:before {
   @apply w-full rounded-md;

@@ -13,7 +13,7 @@
 <body>
 	<header id="wrapper-navbar">
 		<nav id="main-nav">
-			<div class="top-header bg-light-grey">
+			<div class="top-header bg-dark">
 				<div class="container mx-auto">
 					.
 				</div>

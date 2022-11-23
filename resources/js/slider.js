@@ -2977,11 +2977,10 @@
 });
 
 jQuery(document).ready(function ($) {
-  let slider = $('.slider');
-  slider.slick({
+  $('.slider').slick({
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    variableWidth: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerMode: true,
   });
 });

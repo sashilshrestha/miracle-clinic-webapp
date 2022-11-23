@@ -48,7 +48,7 @@
   <div class="services-content">
     <div class="slider">
       <?php
-      for ($x = 0; $x < 5; $x++) {
+      for ($x = 0; $x < 7; $x++) {
       ?>
         <div class="card">
           <h2>Cosmetic Procedures</h2>

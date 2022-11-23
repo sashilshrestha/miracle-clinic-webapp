@@ -36,10 +36,17 @@
   .services-content {
     .slider.slick-initialized {
       .slick-list {
+        &.draggable {
+          padding: 30px !important;
+        }
+
         .slick-track {
           .slick-slide {
-            // @include -width(350);
             @include margin(0, 15, 0, 15);
+            box-shadow: 0px 4px 25px 0px #00000010;
+            transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+            transform: scale(0.95);
+
             .card {
               @apply relative rounded-lg h-96 flex flex-col items-center justify-end p-7;
               h2 {
@@ -65,8 +72,27 @@
             }
 
             &.slick-current {
+              transform: scale(1.05);
             }
           }
+        }
+      }
+
+      .slick-arrow {
+        z-index: 1;
+        background-color: $dark;
+        @apply w-12 h-12 rounded-full;
+
+        &.slick-prev {
+          @apply left-7;
+        }
+
+        &.slick-next {
+          @apply right-7;
+        }
+
+        &:hover {
+          @apply w-14 h-14;
         }
       }
     }

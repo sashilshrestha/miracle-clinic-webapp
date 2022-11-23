@@ -449,8 +449,14 @@ footer#footer .container .author--section span {
   justify-content: center;
 }
 
+#services .services-content .slider.slick-initialized .slick-list.draggable {
+  padding: 30px !important;
+}
 #services .services-content .slider.slick-initialized .slick-list .slick-track .slick-slide {
   margin: 0rem 0.9375rem 0rem 0.9375rem;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.062745098);
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transform: scale(0.95);
 }
 #services .services-content .slider.slick-initialized .slick-list .slick-track .slick-slide .card {
   @apply relative rounded-lg h-96 flex flex-col items-center justify-end p-7;
@@ -470,6 +476,24 @@ footer#footer .container .author--section span {
   z-index: -2;
   border-radius: inherit;
 }
+#services .services-content .slider.slick-initialized .slick-list .slick-track .slick-slide.slick-current {
+  transform: scale(1.05);
+}
+#services .services-content .slider.slick-initialized .slick-arrow {
+  z-index: 1;
+  background-color: #231F20;
+  @apply w-12 h-12 rounded-full;
+}
+#services .services-content .slider.slick-initialized .slick-arrow.slick-prev {
+  @apply left-7;
+}
+#services .services-content .slider.slick-initialized .slick-arrow.slick-next {
+  @apply right-7;
+}
+#services .services-content .slider.slick-initialized .slick-arrow:hover {
+  @apply w-14 h-14;
+}
+
 #offers .offers-content .card {
   @apply flex items-center p-7 pl-8 cursor-pointer relative rounded-md;
   width: 26.25rem;

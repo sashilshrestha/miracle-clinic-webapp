@@ -2979,29 +2979,9 @@
 jQuery(document).ready(function ($) {
   let slider = $('.slider');
   slider.slick({
-    // infinite: true,
-    slidesToShow: 3,
-    // slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '60px',
-    // speed: 500,
-    useTransform: true,
-    // cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)',
-
+    infinite: true,
     speed: 500,
-  });
-
-  function jumpBack() {
-    setTimeout(function () {
-      slider.slick('slickGoTo', 0);
-    }, 3000);
-  }
-
-  slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-    console.log(currentSlide);
-    if (currentSlide === 2) {
-      console.log('last slide');
-      jumpBack();
-    }
+    slidesToShow: 3,
+    variableWidth: false,
   });
 });

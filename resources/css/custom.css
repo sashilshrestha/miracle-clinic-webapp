@@ -551,8 +551,4 @@ footer#footer .container .author--section span {
   line-height: 120%;
 }
 
-body *:not(.slick-track):not(.slick-list) {
-  transition: none !important;
-}
-
 /*# sourceMappingURL=custom.css.map */

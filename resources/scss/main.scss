@@ -19,7 +19,3 @@ Table Of Content
 
 /* 9. Content */
 @import 'pages/home';
-
-body *:not(.slick-track):not(.slick-list) {
-  transition: none !important;
-}

@@ -46,22 +46,24 @@
     </div>
   </div>
   <div class="services-content">
-    <div class="flex gap-6">
+    <ul class="slider items">
       <?php
       for ($x = 0; $x < 5; $x++) {
       ?>
-        <div class="card">
-          <h2>Cosmetic Procedures</h2>
-          <h6>Keep your skin free from things you don’t like.
-          </h6>
-          <div class="overlay"></div>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" class="absolute top-0 left-0 object-cover h-full w-full
+        <li class="item">
+          <div class="content card">
+            <h2>Cosmetic Procedures</h2>
+            <h6>Keep your skin free from things you don’t like.
+            </h6>
+            <div class="overlay"></div>
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" class="absolute top-0 left-0 object-cover h-full w-full
           ">
-        </div>
+          </div>
+        </li>
       <?php
       }
       ?>
-    </div>
+    </ul>
   </div>
   <div id="section-footer">
     <button class="button primary"><a href="#">View All Services</a></button>

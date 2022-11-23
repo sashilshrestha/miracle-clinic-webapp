@@ -449,26 +449,27 @@ footer#footer .container .author--section span {
   justify-content: center;
 }
 
-#services .services-content .card {
-  @apply relative rounded-lg h-96 flex flex-col items-center justify-end p-7;
-  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.062745098);
+#services .services-content .slider.slick-initialized .slick-list .slick-track .slick-slide {
+  margin: 0rem 0.9375rem 0rem 0.9375rem;
 }
-#services .services-content .card h2 {
+#services .services-content .slider.slick-initialized .slick-list .slick-track .slick-slide .card {
+  @apply relative rounded-lg h-96 flex flex-col items-center justify-end p-7;
+}
+#services .services-content .slider.slick-initialized .slick-list .slick-track .slick-slide .card h2 {
   @apply text-3xl font-bold text-center;
 }
-#services .services-content .card h6 {
+#services .services-content .slider.slick-initialized .slick-list .slick-track .slick-slide .card h6 {
   @apply text-xl text-center;
 }
-#services .services-content .card .overlay {
+#services .services-content .slider.slick-initialized .slick-list .slick-track .slick-slide .card .overlay {
   @apply absolute top-0 left-0 w-full h-full;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.84) 61.98%, #ffffff 100%);
   z-index: -1;
 }
-#services .services-content .card img {
+#services .services-content .slider.slick-initialized .slick-list .slick-track .slick-slide .card img {
   z-index: -2;
   border-radius: inherit;
 }
-
 #offers .offers-content .card {
   @apply flex items-center p-7 pl-8 cursor-pointer relative rounded-md;
   width: 26.25rem;
@@ -548,6 +549,10 @@ footer#footer .container .author--section span {
 #why .container .why-content .grid .point p {
   @apply text-lg;
   line-height: 120%;
+}
+
+body *:not(.slick-track):not(.slick-list) {
+  transition: none !important;
 }
 
 /*# sourceMappingURL=custom.css.map */

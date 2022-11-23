@@ -4,35 +4,39 @@ $conversionRatioRemToPxWeb: 16;
 
 // Scales
 @function toRem($size) {
-	@return $size * $conversionRatioSpToRemWeb + 0rem;
+  @return $size * $conversionRatioSpToRemWeb + 0rem;
 }
 
 @function toPx($rems) {
-	@return $rems * $conversionRatioRemToPxWeb + 0rem;
+  @return $rems * $conversionRatioRemToPxWeb + 0rem;
 }
 
 @mixin font-size($size) {
-	font-size: #{toRem($size)};
+  font-size: #{toRem($size)};
 }
 
 @mixin line-height($size) {
-	line-height: #{toRem($size)};
+  line-height: #{toRem($size)};
 }
 
 @mixin width($size) {
-	width: #{toRem($size)};
+  width: #{toRem($size)};
+}
+
+@mixin -width($size) {
+  width: #{toRem($size)} !important;
 }
 
 @mixin height($size) {
-	height: #{toRem($size)};
+  height: #{toRem($size)};
 }
 
 @mixin margin($m1, $m2, $m3, $m4) {
-	margin: #{toRem($m1)} #{toRem($m2)} #{toRem($m3)} #{toRem($m4)};
+  margin: #{toRem($m1)} #{toRem($m2)} #{toRem($m3)} #{toRem($m4)};
 }
 
 @mixin padding($p1, $p2, $p3, $p4) {
-	padding: #{toRem($p1)} #{toRem($p2)} #{toRem($p3)} #{toRem($p4)};
+  padding: #{toRem($p1)} #{toRem($p2)} #{toRem($p3)} #{toRem($p4)};
 }
 
 // @function spacing($tracking, $px) {
@@ -55,7 +59,7 @@ $w-bold: 700;
 $w-black: 900;
 
 @mixin set($arg) {
-	@media screen and (max-width: #{$arg}px) {
-		@content;
-	}
+  @media screen and (max-width: #{$arg}px) {
+    @content;
+  }
 }

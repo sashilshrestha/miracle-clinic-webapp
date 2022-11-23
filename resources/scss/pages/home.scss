@@ -34,7 +34,7 @@
 
 #services {
   .services-content {
-    .slider.slick-initialized {
+    .services-slider.slick-initialized {
       .slick-list {
         &.draggable {
           padding: 30px !important;
@@ -189,6 +189,14 @@
           }
         }
       }
+    }
+  }
+}
+
+#stories {
+  .stories-content {
+    .stories-slider {
+      @apply flex;
     }
   }
 }

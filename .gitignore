@@ -3,3 +3,5 @@
 /.vscode
 css/*
 js/*
+resources/css/custom.css
+resources/css/custom.css.map

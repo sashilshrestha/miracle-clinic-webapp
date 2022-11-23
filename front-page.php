@@ -4,7 +4,7 @@
     <div class="flex">
       <div class="flex flex-col justify-center w-6/12 pr-10">
         <h6>Welcome to Miracle Skin Care</h6>
-        <h1 class="font-bolder text-5xl mb-2">When they ask you how you’ll tell it’s Miracle </h1>
+        <h1 class="font-bolder text-5xl mb-2 tracking-tighter">When they ask you how you’ll tell it’s Miracle </h1>
         <p class="mb-4">We are a multi-disciplinary aesthetic derma care clinic in Kathmandu. Get trusted treatment with advanced technology and expertise to transform your skin, hair and aesthetic health.
         </p>
         <div>
@@ -22,15 +22,15 @@
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-6 place-content-center">
       <div class="card px-10 bg-white shadow-md py-">
-        <div class="title text-2xl font-bold">Top Laser Treatment</div>
+        <div class="title text-2xl font-bold tracking-tight">Top Laser Treatment</div>
         <div class="learn-more">Learn More</div>
       </div>
       <div class="card px-10 bg-white shadow-md">
-        <div class="title text-2xl font-bold">Top Laser Treatment Top Laser Treatment Top Laser Treatment</div>
+        <div class="title text-2xl font-bold tracking-tight">Top Laser Treatment Top Laser Treatment Top Laser Treatment</div>
         <div class="learn-more">Learn More</div>
       </div>
       <div class="card px-10 bg-white shadow-md">
-        <div class="title text-2xl font-bold">Top Laser Treatment</div>
+        <div class="title text-2xl font-bold tracking-tight">Top Laser Treatment</div>
         <div class="learn-more">Learn More</div>
       </div>
     </div>
@@ -144,20 +144,25 @@
   <div class="stories-content">
     <div class="stories-slider">
       <?php
-      for ($x = 0; $x < 7; $x++) {
+      for ($x = 0; $x < 3; $x++) {
       ?>
         <div class="card">
-          <h2>Cosmetic Procedures</h2>
-          <h6>Keep your skin free from things you don’t like.
-          </h6>
+          <div class="card-content">
+            <h6>Date: 28 Oct 2022</h6>
+            <h1>Treatment: Laser Hair Removal Treatment
+            </h1>
+            <button class="button italic secondary font-bold tracking-tighter">Learn More</button>
+          </div>
           <div class="overlay"></div>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" class="absolute top-0 left-0 object-cover h-full w-full
-          ">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
         </div>
       <?php
       }
       ?>
     </div>
+  </div>
+  <div id="section-footer">
+    <button class="button primary"><a href="#">View All Services</a></button>
   </div>
 </div>
 <?php get_footer() ?>

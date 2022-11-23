@@ -194,9 +194,45 @@
 }
 
 #stories {
+  @apply mt-32;
   .stories-content {
     .stories-slider {
       @apply flex;
+      .card {
+        @apply relative rounded-md justify-end items-center p-28;
+        @apply flex #{!important};
+        @include -width(1394);
+        @include height(440);
+        @include margin(0, 15, 0, 15);
+
+        &-content {
+          @apply flex flex-col items-end text-right;
+          @include width(500);
+          h6 {
+            @apply text-primary italic text-lg mb-2;
+          }
+          h1 {
+            @apply text-white font-extrabold text-5xl mb-4;
+          }
+        }
+
+        .overlay {
+          @apply absolute top-0 left-0 w-full h-full;
+          background: linear-gradient(
+            90deg,
+            rgba(35, 31, 32, 0.4) 0%,
+            #231f20 100%
+          );
+          border-radius: inherit;
+          z-index: -1;
+        }
+
+        img {
+          @apply absolute w-full h-full top-0 left-0 object-cover;
+          z-index: -2;
+          border-radius: inherit;
+        }
+      }
     }
   }
 }

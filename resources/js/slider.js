@@ -2983,4 +2983,11 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
     centerMode: true,
   });
+  $('.stories-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true,
+  });
 });

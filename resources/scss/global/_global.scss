@@ -1,9 +1,9 @@
 * {
-	transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 h1,
@@ -11,104 +11,108 @@ h2,
 h3,
 h4,
 h5 {
-	margin: 0;
+  margin: 0;
 }
 
 a {
-	text-decoration: none;
-	color: $white;
+  text-decoration: none;
+  color: $white;
 }
 
 .btn {
-	@include font-size(21);
-	font-weight: 900;
-	text-transform: uppercase;
-	@include padding(15, 28, 15, 28);
-	border: none;
+  @include font-size(21);
+  font-weight: 900;
+  text-transform: uppercase;
+  @include padding(15, 28, 15, 28);
+  border: none;
 
-	&.btn-primary {
-		background-color: $primary;
-		color: $white;
-	}
+  &.btn-primary {
+    background-color: $primary;
+    color: $white;
+  }
 }
 
 .page--header {
-	@include padding(160, 0, 100, 0);
-	background-color: $light;
-	display: flex;
-	justify-content: center;
-	h1 {
-		background: linear-gradient(90deg, $primary, $secondary);
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		font-weight: 900;
-		letter-spacing: #{toRem(-3)};
-		@include font-size(66.3);
-		text-transform: capitalize;
-		padding: 0 1rem;
-	}
+  @include padding(160, 0, 100, 0);
+  background-color: $light;
+  display: flex;
+  justify-content: center;
+  h1 {
+    background: linear-gradient(90deg, $primary, $secondary);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    letter-spacing: #{toRem(-3)};
+    @include font-size(66.3);
+    text-transform: capitalize;
+    padding: 0 1rem;
+  }
 }
 
 .pagination--container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: $primary;
-	@include margin(40, 0, 20, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary;
+  @include margin(40, 0, 20, 0);
 
-	span {
-		width: 2rem;
-		height: 2rem;
-		background: $primary;
-		color: $white;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 999px;
-		margin: 0 0.5rem;
-	}
+  span {
+    width: 2rem;
+    height: 2rem;
+    background: $primary;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    margin: 0 0.5rem;
+  }
 }
 
 .pagination--container > * {
-	margin: 0 1rem;
-	@include font-size(18);
-	font-weight: 500;
-	color: $primary;
+  margin: 0 1rem;
+  @include font-size(18);
+  font-weight: 500;
+  color: $primary;
 
-	&:hover {
-		color: $secondary;
-	}
+  &:hover {
+    color: $secondary;
+  }
 }
 
 .wp-block-embed iframe {
-	width: 100%;
+  width: 100%;
 }
 
 .mfp-title {
-	text-align: center !important;
-	font-weight: 900;
-	font-size: 1.6rem;
-	padding: 0.5rem 0;
+  text-align: center !important;
+  font-weight: 900;
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
 }
 
 button {
-	&.button {
-		font-size: 1rem;
-		padding: 0.625rem 1.25rem;
-		font-weight: 500;
-		width: fit-content;
-		@apply rounded;
+  &.button {
+    font-size: 1rem;
+    padding: 0.625rem 1.25rem;
+    font-weight: 500;
+    width: fit-content;
+    @apply rounded;
 
-		&.primary {
-			background-color: $dark;
-			color: $white;
-		}
+    &.primary {
+      background-color: $dark;
+      color: $white;
+    }
 
-		&.ghost {
-			color: $dark;
-			box-shadow: inset 0px 0px 0px 1px $dark;
-		}
-	}
+    &.ghost {
+      color: $dark;
+      box-shadow: inset 0px 0px 0px 1px $dark;
+    }
+
+    &.secondary {
+      @apply bg-primary text-dark;
+    }
+  }
 }
 
 // .slick-slide>div {

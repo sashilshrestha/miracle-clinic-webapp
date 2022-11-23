@@ -165,4 +165,34 @@
     <button class="button primary"><a href="#">View All Services</a></button>
   </div>
 </div>
+<div id="team">
+  <div id="top-header">
+    <div class="container mx-auto">
+      <h5>Meet Our Team</h5>
+      <h2>Experts with empathy, Ready to help you</h2>
+      <h6>Our expert doctors and practitioners serve you with the highest quality derma care.</h6>
+    </div>
+  </div>
+  <div class="team-content">
+    <?php
+    for ($x = 0; $x < 3; $x++) {
+    ?>
+      <div class="person">
+        <div class="profile">
+          <div class="container">
+            <div class="container-inner">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profile-back.png" alt="" class="circle">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profile-pic.png" class="img img1" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php
+    }
+    ?>
+  </div>
+  <div id="section-footer">
+    <button class="button primary"><a href="#">View All Services</a></button>
+  </div>
+</div>
 <?php get_footer() ?>

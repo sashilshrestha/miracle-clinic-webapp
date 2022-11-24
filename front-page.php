@@ -174,22 +174,25 @@
     </div>
   </div>
   <div class="team-content">
-    <?php
-    for ($x = 0; $x < 3; $x++) {
-    ?>
-      <div class="person">
-        <div class="profile">
-          <div class="container">
-            <div class="container-inner">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profile-back.png" alt="" class="circle">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profile-pic.png" class="img img1" alt="">
+    <div class="container mx-auto">
+      <div class="flex justify-center flex-wrap gap-20">
+        <?php
+        for ($x = 0; $x < 7; $x++) {
+        ?>
+          <div class="person-container">
+            <div class="person-circle">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profile-pic.png" alt="">
             </div>
+            <h1>Dr.Mohan Bhusal</h1>
+            <h6>Dermato-venereologist, Laser and Hair Specialist
+            </h6>
+
           </div>
-        </div>
+        <?php
+        }
+        ?>
       </div>
-    <?php
-    }
-    ?>
+    </div>
   </div>
   <div id="section-footer">
     <button class="button primary"><a href="#">View All Services</a></button>

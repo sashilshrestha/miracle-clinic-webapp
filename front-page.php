@@ -175,7 +175,7 @@
   </div>
   <div class="team-content">
     <div class="container mx-auto">
-      <div class="flex justify-center flex-wrap gap-20">
+      <div class="flex justify-center flex-wrap gap-16">
         <?php
         for ($x = 0; $x < 7; $x++) {
         ?>

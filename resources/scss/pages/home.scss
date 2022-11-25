@@ -240,11 +240,21 @@
 #team {
   .team-content {
     .person-container {
-      @apply w-min;
+      @apply w-min flex flex-col items-center mb-6;
+
+      &:hover {
+        .person-circle {
+          border: 1rem solid #ffdc7f;
+          transform: scale(1);
+        }
+      }
       .person-circle {
-        @apply rounded-full overflow-hidden bg-primary cursor-pointer;
-        width: 20rem;
-        height: 20rem;
+        @apply rounded-full overflow-hidden bg-primary cursor-pointer flex justify-center;
+        width: 15rem;
+        height: 15rem;
+        transform: scale(0.9);
+        outline: 1rem solid #fcca444d;
+
         img {
           transform: scale(0.95) translateY(2rem);
         }
@@ -256,10 +266,11 @@
         }
       }
       h1 {
-        @apply text-4xl tracking-tight font-extrabold text-center mt-3;
+        @apply text-4xl tracking-tight font-extrabold text-center mt-6 my-3 w-max text-dark;
       }
       h6 {
         @apply text-2xl font-normal text-center;
+        line-height: 120%;
       }
     }
   }

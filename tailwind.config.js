@@ -24,6 +24,7 @@ module.exports = {
         'light-grey': '#EFEFEF',
         primary: '#FCCA44',
         dark: '#231F20',
+        text: '#787878',
       },
       fontSize: tailpress.fontSizeMapper(
         tailpress.theme('settings.typography.fontSizes', theme)

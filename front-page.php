@@ -2,9 +2,9 @@
 <main class="pt-[260px]">
   <div class="container mx-auto">
     <div class="flex">
-      <div class="flex flex-col justify-center w-6/12 pr-10">
+      <div class="flex flex-col justify-center w-6/12 pr-10 hero-content">
         <h6>Welcome to Miracle Skin Care</h6>
-        <h1 class="font-bolder text-5xl mb-2 tracking-tighter">When they ask you how you’ll tell it’s Miracle </h1>
+        <h1 class="font-bolder text-6xl mb-2 tracking-tighter">When they ask you how you’ll tell it’s Miracle </h1>
         <p class="mb-4">We are a multi-disciplinary aesthetic derma care clinic in Kathmandu. Get trusted treatment with advanced technology and expertise to transform your skin, hair and aesthetic health.
         </p>
         <div>
@@ -12,7 +12,7 @@
           <button class="button ghost">Learn More</button>
         </div>
       </div>
-      <div class="w-6/12 h-96">
+      <div class="w-6/12 hero-img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" alt="" class="w-full h-full object-cover">
       </div>
     </div>
@@ -26,7 +26,7 @@
         <div class="learn-more">Learn More</div>
       </div>
       <div class="card px-10 bg-white shadow-md">
-        <div class="title text-2xl font-bold tracking-tight">Top Laser Treatment Top Laser Treatment Top Laser Treatment</div>
+        <div class="title text-2xl font-bold tracking-tight">Top Laser Treatment</div>
         <div class="learn-more">Learn More</div>
       </div>
       <div class="card px-10 bg-white shadow-md">
@@ -197,5 +197,55 @@
   <div id="section-footer">
     <button class="button primary"><a href="#">View All Services</a></button>
   </div>
+</div>
+<div id="blogs">
+  <div id="top-header">
+    <div class="container mx-auto">
+      <h5>Our Blogs</h5>
+      <h2>Readings that inspire</h2>
+      <h6>Browse our articles to inspire yourself on your skin, hair and aesthetic journey</h6>
+    </div>
+  </div>
+  <div class="blog-content">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-12 gap-6">
+        <?php
+        for ($x = 0; $x < 3; $x++) {
+        ?>
+          <div class="card ">
+            <img src="https://media.istockphoto.com/id/1182641010/photo/i-love-working-from-home.jpg?b=1&s=170667a&w=0&k=20&c=2Detuk6nIrbeZWmEKiGCIM7nvoGd04VWTXtmxQYYmp4=" alt="">
+            <div class="card-content">
+              <h4>5 Habits That Slowly Damage Your Skin</h4>
+              <p>Get Insights, Information and Care Tips about Skin Hair and Aesthetic Delivered Unsubscribe at any time...</p>
+              <div class="readmore">
+                <a href="">Read Full Article >></a>
+                <span>Mar 10, 2022</span>
+              </div>
+            </div>
+          </div>
+        <?php
+        }
+        ?>
+      </div>
+    </div>
+  </div>
+  <div id="section-footer">
+    <button class="button primary"><a href="#">View All Blogs</a></button>
+  </div>
+</div>
+<div id="map">
+  <div id="top-header">
+    <div class="container mx-auto">
+      <h2>Map Find Us</h2>
+    </div>
+  </div>
+  <div class="map-content">
+    <div class="overlay"></div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.936162419961!2d85.34951711539824!3d27.719257231574602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1997bfa8f5a1%3A0x109668485a4871e!2sMiracle%20Skin%20Hair%20%26%20Aesthetic%20Clinic!5e0!3m2!1sen!2snp!4v1669397703097!5m2!1sen!2snp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+<div id="queries">
+  <h1>Got any questions or want to book an appointment ?</h1>
+  <button class="button primary"><a href="#">Send Enquiry Now</a></button>
 </div>
 <?php get_footer() ?>

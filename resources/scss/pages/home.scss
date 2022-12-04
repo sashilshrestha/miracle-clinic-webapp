@@ -1,3 +1,17 @@
+.hero-content {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 115%;
+  }
+  p {
+    font-size: 1.3rem;
+    line-height: 130%;
+  }
+}
+.hero-img {
+  height: 30rem;
+}
+
 #featured-services {
   position: relative;
   // padding: 18rem 0;
@@ -43,20 +57,28 @@
         .slick-track {
           .slick-slide {
             @include margin(0, 15, 0, 15);
-            box-shadow: 0px 4px 25px 0px #00000010;
+            // box-shadow: 0px 4px 25px 0px #00000010;
             transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
             transform: scale(0.95);
 
             .card {
-              @apply relative rounded-lg h-96 flex flex-col items-center justify-end p-7;
+              @apply relative rounded-lg h-96 flex-col items-center justify-end p-7;
+              @apply flex #{!important};
               h2 {
-                @apply text-3xl font-bold text-center;
+                @apply font-bold text-center tracking-tight;
+                font-size: 1.6rem;
               }
               h6 {
                 @apply text-xl text-center;
+                line-height: 120%;
               }
               .overlay {
-                @apply absolute top-0 left-0 w-full h-full;
+                @apply absolute;
+                top: 50%;
+                left: 50%;
+                height: 105%;
+                transform: translate(-50%, -50%);
+                width: 105%;
                 background: linear-gradient(
                   180deg,
                   rgba(255, 255, 255, 0.29) 0%,
@@ -273,5 +295,65 @@
         line-height: 120%;
       }
     }
+  }
+}
+
+#blogs {
+  .blog-content {
+    .grid {
+      .card {
+        @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4;
+        box-shadow: 0px 4px 25px 0px #00000010;
+        &-content {
+          @apply p-4;
+          h4 {
+            @apply text-2xl font-bold mb-3 tracking-tight;
+            line-height: 120%;
+          }
+          p {
+            @apply text-lg mb-11 text-text;
+            line-height: 120%;
+          }
+        }
+        .readmore {
+          @apply flex justify-between;
+          a {
+            @apply font-medium text-text;
+          }
+          span {
+            @apply italic;
+          }
+        }
+      }
+    }
+  }
+}
+
+#map {
+  .map-content {
+    @apply relative;
+    iframe {
+      @apply w-full;
+      @include height(700);
+      filter: grayscale(1);
+    }
+    &:before {
+      content: '';
+      @apply absolute w-full h-full top-0 left-0 pointer-events-none;
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 55.21%,
+        #ffffff 100%
+      );
+      z-index: 1;
+    }
+  }
+}
+
+#queries {
+  @apply bg-primary flex flex-col justify-center items-center p-24 pb-20;
+  h1 {
+    @apply text-5xl mb-10 tracking-tighter;
   }
 }

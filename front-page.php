@@ -7,10 +7,10 @@
         <h1 class="font-bolder text-6xl mb-2 tracking-tighter">When they ask you how you’ll tell it’s Miracle </h1>
         <p class="mb-4">We are a multi-disciplinary aesthetic derma care clinic in Kathmandu. Get trusted treatment with advanced technology and expertise to transform your skin, hair and aesthetic health.
         </p>
-        <div>
+        <!-- <div>
           <button class="button primary mr-2"><a href="#">Send Enquiry</a></button>
           <button class="button ghost">Learn More</button>
-        </div>
+        </div> -->
       </div>
       <div class="w-6/12 hero-img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" alt="" class="w-full h-full object-cover">
@@ -18,7 +18,7 @@
     </div>
   </div>
 </main>
-<section id="featured-services">
+<!-- <section id="featured-services">
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-6 place-content-center">
       <div class="card px-10 bg-white shadow-md py-">
@@ -36,8 +36,8 @@
     </div>
   </div>
   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wave.png" alt="" class="absolute top-0 left-0 -z-10 h-full w-full">
-</section>
-<section id="services">
+</section> -->
+<!-- <section id="services">
   <div id="top-header">
     <div class="container mx-auto">
       <h5>Our Services</h5>
@@ -66,8 +66,8 @@
   <div id="section-footer">
     <button class="button primary"><a href="#">View All Services</a></button>
   </div>
-</section>
-<div id="offers">
+</section> -->
+<!-- <div id="offers">
   <div id="top-header">
     <div class="container mx-auto">
       <h5>Current Offers</h5>
@@ -102,8 +102,8 @@
   <div id="section-footer">
     <button class="button primary"><a href="#">View All Offers</a></button>
   </div>
-</div>
-<div id="why">
+</div> -->
+<!-- <div id="why">
   <div class="why-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/why.png" alt="" class="w-full h-full object-cover"></div>
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-6 h-full place-content-center">
@@ -239,11 +239,12 @@
   <div id="section-footer">
     <button class="button primary"><a href="#">View All Blogs</a></button>
   </div>
-</div>
+</div> -->
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Launch.png" alt="" class="launch-soon">
 <div id="map">
   <div id="top-header">
     <div class="container mx-auto">
-      <h2>Map Find Us</h2>
+      <!-- <h2>Map Find Us</h2> -->
     </div>
   </div>
   <div class="map-content">

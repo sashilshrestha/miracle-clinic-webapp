@@ -10,14 +10,15 @@ header {
     .navbar {
       .container {
         display: flex;
-        // justify-content: center;
-        justify-content: space-between;
+        justify-content: center;
+        // justify-content: space-between;
         align-items: center;
         min-height: #{toRem(100)};
+        padding: 2rem 0;
 
         .navbar-brand {
           img {
-            height: 4rem;
+            height: 6rem;
             width: 100%;
           }
         }

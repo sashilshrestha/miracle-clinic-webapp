@@ -25,12 +25,12 @@
 					</div>
 					<!-- The WordPress Menu goes here -->
 					<?php
-					wp_nav_menu(
-						array(
-							'menu_id' => 'primary-menu',
-							'menu_class'      => 'nav-links',
-						)
-					);
+					// wp_nav_menu(
+					// 	array(
+					// 		'menu_id' => 'primary-menu',
+					// 		'menu_class'      => 'nav-links',
+					// 	)
+					// );
 					?>
 					<div class="ham-burger">
 						<div class="all-lines">

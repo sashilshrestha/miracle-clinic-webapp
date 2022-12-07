@@ -8,7 +8,7 @@
         <p class="mb-4">We are a multi-disciplinary aesthetic derma care clinic in Kathmandu. Get trusted treatment with advanced technology and expertise to transform your skin, hair and aesthetic health.
         </p>
         <div>
-          <button class="button primary"><a href="#">Send Enquiry</a></button>
+          <button class="button primary mr-2"><a href="#">Send Enquiry</a></button>
           <button class="button ghost">Learn More</button>
         </div>
       </div>
@@ -55,7 +55,7 @@
           <h6>Keep your skin free from things you don’t like.
           </h6>
           <div class="overlay"></div>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" class="absolute top-0 left-0 object-cover h-full w-full
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cosmetics.jpg" alt="" class="absolute top-0 left-0 object-cover h-full w-full
           ">
         </div>
       <?php
@@ -177,20 +177,27 @@
     <div class="container mx-auto">
       <div class="flex justify-center flex-wrap gap-16">
         <?php
-        for ($x = 0; $x < 7; $x++) {
+        for ($x = 0; $x < 6; $x++) {
         ?>
           <div class="person-container">
             <div class="person-circle">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profile-pic.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mohan-bhusal.png" alt="">
             </div>
             <h1>Dr.Mohan Bhusal</h1>
             <h6>Dermato-venereologist, Laser and Hair Specialist
             </h6>
-
           </div>
         <?php
         }
         ?>
+        <div class="person-container">
+          <div class="person-circle">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/elisha-bhattrai.png" alt="">
+          </div>
+          <h1>Dr. Elisha Bhattrai</h1>
+          <h6>Dermato-venereologist, Laser and Hair Specialist
+          </h6>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,49 @@
+#about-page {
+  .intro {
+    @apply my-24;
+    h1 {
+      @apply text-5xl underline underline-offset-4 mb-6 pl-20;
+      color: $dark;
+    }
+    p {
+      @apply text-3xl w-7/12 pl-32;
+    }
+    .hero-img {
+      z-index: -1;
+      right: 0;
+      top: 0;
+      height: 100%;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+  }
+  .who {
+    @apply py-20 relative;
+    h1 {
+      @apply text-4xl text-center mb-4;
+    }
+    p {
+      @apply text-center text-2xl mx-44;
+      line-height: 145%;
+    }
+    img.img-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

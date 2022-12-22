@@ -23,6 +23,7 @@ module.exports = {
       colors: {
         'light-grey': '#EFEFEF',
         primary: '#FCCA44',
+        'primary-light': '#FFFBF2',
         dark: '#231F20',
         text: '#787878',
       },

@@ -1,0 +1,13 @@
+#results-page {
+  .results-container {
+    @apply my-16;
+    .result-card {
+      @apply col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center rounded-md cursor-pointer;
+      @apply h-[30rem];
+
+      img {
+        @apply rounded-md;
+      }
+    }
+  }
+}

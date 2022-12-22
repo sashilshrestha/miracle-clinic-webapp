@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<main class="pt-[260px]">
+<main class="pt-[16.25rem]">
   <div class="container mx-auto">
     <div class="flex">
       <div class="flex flex-col justify-center w-6/12 pr-10 hero-content">

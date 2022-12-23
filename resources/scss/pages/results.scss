@@ -3,11 +3,42 @@
     @apply my-16;
     .result-card {
       @apply col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center rounded-md cursor-pointer;
-      @apply h-[30rem];
-
+      @apply h-[30rem] relative;
+      .result-description {
+        @apply absolute top-0 left-0 w-full h-full rounded-md p-8;
+        background: linear-gradient(
+          180deg,
+          rgba(35, 31, 32, 0.46) 0%,
+          #231f20 100%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        opacity: 0;
+        .name {
+          @apply text-2xl text-primary underline underline-offset-4 font-bold mb-4;
+        }
+        .details {
+          @apply text-3xl text-white  mb-3;
+          &-title {
+            @apply font-bold;
+          }
+          &-treatment {
+          }
+        }
+        .read-more {
+          @apply italic text-primary text-base flex justify-between;
+          a {
+            @apply text-primary;
+          }
+        }
+      }
       img {
         @apply rounded-md;
       }
+    }
+    .result-card:hover > .result-description {
+      opacity: 1;
     }
   }
 }

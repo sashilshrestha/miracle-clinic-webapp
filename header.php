@@ -11,6 +11,10 @@
 </head>
 
 <body>
+	<div id="load">
+		<?php echo get_custom_logo(); ?>
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/loading.gif" alt="" class="spinner">
+	</div>
 	<header id="wrapper-navbar">
 		<nav id="main-nav">
 			<div class="top-header bg-dark">

@@ -115,3 +115,24 @@ function tailpress_nav_menu_add_submenu_class($classes, $args, $depth)
 }
 
 add_filter('nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3);
+
+// ----------------------------- Custom blog post type -----------------------------
+function gk_custom_blogs()
+{
+	register_post_type('blogs', [
+		'rewrite' => ['slug' => 'blogs'],
+		'labels' => [
+			'name' => 'Blogs',
+			'singular_name' => 'Blog',
+			'add_new_item' => 'Add New Blog',
+			'edit_item' => 'Edit Blog',
+		],
+		'menu_icon' => 'dashicons-welcome-write-blog',
+		'public' => true,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'menu_position' => 14,
+		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes', 'taxonomy'],
+	]);
+}
+add_action('init', 'gk_custom_blogs');

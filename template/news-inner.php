@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: News Page
+ * Template Name: News Inner Page
  */
 
 // Exit if accessed directly.
@@ -16,7 +16,7 @@ get_header();
   </div>
 </header>
 <main id="news-page">
-  <div class="container mx-auto py-9">
+  <div class="container mx-auto py-24">
     <div class="top-news">
       <?php
       for ($x = 0; $x < 3; $x++) {

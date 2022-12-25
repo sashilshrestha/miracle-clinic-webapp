@@ -1,17 +1,92 @@
-.parent {
+.top-news {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-}
+  gap: 1.5rem;
 
-.div1 {
-  grid-area: 1 / 1 / 3 / 3;
+  .top-card {
+    @apply rounded-md flex items-end text-white;
+    padding: 1.5rem;
+    position: relative;
+    &:nth-child(1) {
+      grid-area: 1 / 1 / 3 / 2;
+    }
+    &:nth-child(2) {
+      grid-area: 1 / 2 / 2 / 3;
+      height: 22rem;
+    }
+    &:nth-child(3) {
+      grid-area: 2 / 2 / 3 / 3;
+      height: 22rem;
+    }
+
+    img {
+      @apply rounded-md;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .overlay {
+      @apply rounded-md;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(35, 31, 32, 0) 0%,
+        rgba(35, 31, 32, 0.8) 72.4%,
+        #231f20 100%
+      );
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    .card-content {
+      z-index: 1;
+
+      p {
+      }
+      h1 {
+        @apply text-3xl font-bold;
+        a {
+          font-weight: inherit;
+        }
+      }
+    }
+  }
 }
-.div2 {
-  grid-area: 1 / 2 / 2 / 3;
-}
-.div3 {
-  grid-area: 2 / 2 / 3 / 3;
+.news-card-container {
+  margin-top: 1.5rem;
+  .grid {
+    .card {
+      @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4;
+      box-shadow: 0px 4px 25px 0px #00000010;
+      &-content {
+        @apply p-4;
+        h4 {
+          @apply text-2xl font-bold mb-3 tracking-tight;
+          line-height: 120%;
+        }
+        p {
+          @apply text-lg mb-11 text-text;
+          line-height: 120%;
+        }
+      }
+      .readmore {
+        @apply flex justify-between;
+        a {
+          @apply font-medium text-text;
+        }
+        span {
+          @apply italic;
+        }
+      }
+    }
+  }
 }

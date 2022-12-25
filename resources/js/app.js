@@ -1,3 +1,9 @@
+jQuery(document).ready(function ($) {
+  setTimeout(() => {
+    $('#load').addClass('opacity-0 !-z-50');
+  }, 500);
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   /* Responsive Navigation Toggling */
   const navSlide = () => {

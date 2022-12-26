@@ -18,6 +18,40 @@
     .content {
       p {
         margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+      }
+      aside {
+        .share-post {
+          display: flex;
+          align-items: center;
+          margin: 0 0 2rem;
+          a {
+            margin: 0 0.5rem;
+            img {
+              width: 2rem;
+              height: 2rem;
+              object-fit: contain;
+            }
+          }
+        }
+        .other-posts {
+          .post-card {
+            display: flex;
+            margin: 0 0 2rem;
+            img {
+              width: 4.2rem;
+              height: 4.2rem;
+              object-fit: cover;
+            }
+            .post-description {
+              line-height: 120%;
+              font-size: 1.2rem;
+              h5 {
+                color: $dark;
+              }
+            }
+          }
+        }
       }
     }
   }

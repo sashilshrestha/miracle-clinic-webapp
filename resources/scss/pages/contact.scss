@@ -1,0 +1,27 @@
+#contact-page {
+  margin: 5rem 0;
+  .content {
+    box-shadow: 0px 7px 35px 0px #00000012;
+    .contact-left {
+      background-color: $primary;
+      padding: #{toRem(33)};
+      .detail {
+        &:not(:last-child) {
+          margin: 0 0 1.5rem;
+        }
+        h5 {
+          @include font-size(26);
+          color: $dark;
+        }
+        p {
+          @include font-size(18);
+          line-height: 130%;
+          color: rgba($dark, $alpha: 0.9);
+          margin: 0 0 0.1rem;
+        }
+      }
+    }
+    .contact-right {
+    }
+  }
+}

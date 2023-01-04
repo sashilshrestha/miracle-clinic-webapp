@@ -116,6 +116,60 @@ function tailpress_nav_menu_add_submenu_class($classes, $args, $depth)
 
 add_filter('nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3);
 
+// ----------------------------- Feature image in admin pannel -----------------------------
+// show featured images in dashboard
+add_image_size('prithak-admin-post-featured-image', 70, 120, false);
+
+// Add the posts and pages columns filter. They both use the same function.
+add_filter('manage_posts_columns', 'prithak_add_post_admin_thumbnail_column', 2);
+add_filter('manage_pages_columns', 'prithak_add_post_admin_thumbnail_column', 2);
+
+// Add the column
+function prithak_add_post_admin_thumbnail_column($prithak_columns)
+{
+	$prithak_columns['prithak_thumb'] = __('Featured Image');
+	return $prithak_columns;
+}
+
+// Manage Post and Page Admin Panel Columns
+add_action('manage_posts_custom_column', 'prithak_show_post_thumbnail_column', 5, 2);
+add_action('manage_pages_custom_column', 'prithak_show_post_thumbnail_column', 5, 2);
+
+// Get featured-thumbnail size post thumbnail and display it
+function prithak_show_post_thumbnail_column($prithak_columns, $prithak_id)
+{
+	switch ($prithak_columns) {
+		case 'prithak_thumb':
+			if (function_exists('the_post_thumbnail')) {
+				echo the_post_thumbnail('prithak-admin-post-featured-image');
+			} else
+				echo 'hmm… your theme doesn\'t support featured image…';
+			break;
+	}
+}
+
+// ----------------------------- Custom slider post type -----------------------------
+function gk_custom_slider()
+{
+	register_post_type('services', [
+		'rewrite' => ['slug' => 'services'],
+		'labels' => [
+			'name' => 'Services',
+			'singular_name' => 'Service',
+			'add_new_item' => 'Add New Service',
+			'edit_item' => 'Edit Service',
+		],
+		'menu_icon' => 'dashicons-media-archive',
+		'public' => true,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'menu_position' => 10,
+		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes'],
+		'taxonomies' => array('category')
+	]);
+}
+add_action('init', 'gk_custom_slider');
+
 // ----------------------------- Custom blog post type -----------------------------
 function gk_custom_blogs()
 {
@@ -136,3 +190,13 @@ function gk_custom_blogs()
 	]);
 }
 add_action('init', 'gk_custom_blogs');
+
+function anchor_menu_add_class($atts, $item, $args)
+{
+	if ($item->title == 'Home') {
+		$class = 'ss-link'; // your class
+		$atts['class'] = $class;
+	}
+	return $atts;
+}
+add_filter('nav_menu_link_attributes', 'anchor_menu_add_class', 10, 3);

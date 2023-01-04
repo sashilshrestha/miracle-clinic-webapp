@@ -19,7 +19,17 @@
   @apply flex items-center;
   .container {
     .card {
-      @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4 flex flex-col justify-center rounded-md h-60 cursor-pointer hover:scale-105;
+      @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4 flex flex-col justify-center rounded-md h-60 cursor-pointer;
+      background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.33) 100%
+      );
+      @include height(337);
+      .title {
+        padding-right: 40%;
+        color: $dark;
+      }
     }
   }
 }
@@ -66,10 +76,13 @@
               @apply flex #{!important};
               h2 {
                 @apply font-bold text-center tracking-tight;
-                font-size: 1.6rem;
+                font-size: 1.4rem;
+                font-weight: 700;
+                line-height: 120%;
+                margin: 0 0 0.5rem;
               }
               h6 {
-                @apply text-xl text-center;
+                @apply text-lg text-center;
                 line-height: 120%;
               }
               .overlay {
@@ -220,39 +233,42 @@
   .stories-content {
     .stories-slider {
       @apply flex;
-      .card {
-        @apply relative rounded-md justify-end items-center p-28;
-        @apply flex #{!important};
-        @include -width(1394);
-        @include height(440);
+      .slick-slide {
         @include margin(0, 15, 0, 15);
 
-        &-content {
-          @apply flex flex-col items-end text-right;
-          @include width(500);
-          h6 {
-            @apply text-primary italic text-lg mb-2;
-          }
-          h1 {
-            @apply text-white font-extrabold text-5xl mb-4;
-          }
-        }
+        .card {
+          @apply relative rounded-md justify-end items-center p-28;
+          @apply flex #{!important};
+          // @include width(1394);
+          @include height(440);
 
-        .overlay {
-          @apply absolute top-0 left-0 w-full h-full;
-          background: linear-gradient(
-            90deg,
-            rgba(35, 31, 32, 0.4) 0%,
-            #231f20 100%
-          );
-          border-radius: inherit;
-          z-index: -1;
-        }
+          &-content {
+            @apply flex flex-col items-end text-right;
+            @include width(500);
+            h6 {
+              @apply text-primary italic text-lg mb-2;
+            }
+            h1 {
+              @apply text-white font-extrabold text-5xl mb-4;
+            }
+          }
 
-        img {
-          @apply absolute w-full h-full top-0 left-0 object-cover;
-          z-index: -2;
-          border-radius: inherit;
+          .overlay {
+            @apply absolute top-0 left-0 w-full h-full;
+            background: linear-gradient(
+              90deg,
+              rgba(35, 31, 32, 0.4) 0%,
+              #231f20 100%
+            );
+            border-radius: inherit;
+            z-index: -1;
+          }
+
+          img {
+            @apply absolute w-full h-full top-0 left-0 object-cover;
+            z-index: -2;
+            border-radius: inherit;
+          }
         }
       }
     }

@@ -28,18 +28,23 @@ header {
             justify-content: center;
             padding: 0;
             margin: 0;
+            gap: 2rem;
 
             .menu-item {
               list-style: none;
+              width: max-content;
+              display: flex;
+              padding: 0.5rem 0.8rem;
+
               &.current-menu-item {
                 a {
                   border-bottom: 2px solid $black;
                 }
               }
               a {
+                padding: 0;
+                margin: 0;
                 text-decoration: none;
-                @include padding(10, 5, 3, 5);
-                @include margin(0, 10, 0, 10);
                 @include font-size(18);
                 color: $black;
                 font-weight: 500;
@@ -52,18 +57,48 @@ header {
               &.menu-item-has-children {
                 position: relative;
 
+                &.dropdown-active {
+                  .sub-menu {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: auto;
+                  }
+                }
+
                 .sub-menu {
-                  display: none;
+                  backdrop-filter: blur(20px);
                   position: absolute;
-                  background-color: red;
+                  left: 0.5rem;
+                  top: calc(100% + 0.25rem);
+                  background-color: white;
+                  border-radius: 0.25rem;
+                  // box-shadow: 0 2px 5px 0 rgba(#000000, 0.1);
+                  border-bottom: 2px solid black;
+                  opacity: 0;
+                  pointer-events: none;
+                  transform: translateY(-10px);
+                  transition: opacity 150ms ease-in-out,
+                    transform 150ms ease-in-out;
                 }
               }
-              &.menu-item-has-children:hover > .sub-menu {
-                display: block;
-                a {
-                  white-space: nowrap;
-                }
-              }
+              // &.menu-item-has-children:hover > .sub-menu {
+              //   opacity: 1;
+              //   left: 0;
+              //   visibility: visible;
+              //   background: $primary;
+              //   background: linear-gradient(
+              //     0deg,
+              //     $primary 0%,
+              //     rgba($primary, 0.33) 100%
+              //   );
+
+              //   box-shadow: 0px 4px 40px rgba(#000000, 0.05);
+              //   padding: 0;
+              //   a {
+              //     white-space: nowrap;
+              //     padding: 1.5rem;
+              //   }
+              // }
             }
 
             &.nav-active {

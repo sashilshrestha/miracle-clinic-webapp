@@ -9,7 +9,7 @@
         </p>
         <div>
           <button class="button primary mr-2"><a href="#">Send Enquiry</a></button>
-          <button class="button ghost">Learn More</button>
+          <!-- <button class="button ghost">Learn More</button> -->
         </div>
       </div>
       <div class="w-6/12 hero-img">
@@ -21,18 +21,20 @@
 <section id="featured-services">
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-6 place-content-center">
-      <div class="card px-10 bg-white shadow-md py-">
-        <div class="title text-2xl font-bold tracking-tight">Top Laser Treatment</div>
-        <div class="learn-more">Learn More</div>
-      </div>
-      <div class="card px-10 bg-white shadow-md">
-        <div class="title text-2xl font-bold tracking-tight">Top Laser Treatment</div>
-        <div class="learn-more">Learn More</div>
-      </div>
-      <div class="card px-10 bg-white shadow-md">
-        <div class="title text-2xl font-bold tracking-tight">Top Laser Treatment</div>
-        <div class="learn-more">Learn More</div>
-      </div>
+      <?php
+      for ($x = 1; $x <= 3; $x++) {
+      ?>
+        <div class="card shadow-md py- relative">
+          <div class="px-8">
+            <div class="title text-3xl font-bold tracking-tight"><?php echo get_field('service_' . $x . ''); ?></div>
+            <div class="learn-more">Learn More</div>
+          </div>
+          <img src="<?php echo get_field('service_image_' . $x . ''); ?>" alt="" class="absolute h-full w-full object-cover rounded-md" style="z-index: -1">
+        </div>
+      <?php
+      }
+      ?>
+
     </div>
   </div>
   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wave.png" alt="" class="absolute top-0 left-0 -z-10 h-full w-full">
@@ -47,27 +49,39 @@
   </div>
   <div class="services-content">
     <div class="services-slider">
+      <!-- Post Calling Loop Started -->
       <?php
-      for ($x = 0; $x < 7; $x++) {
+      $categories = get_categories(array(
+        'orderby' => 'name',
+        'order' => 'ASC'
+      ));
+      foreach ($categories as $category) {
+        $category_link = get_category_link($category->term_id);
+        $category_id = $category->term_id;
+
+        $image = get_field('category_thumbnail', 'category_' . $category_id);
+
       ?>
+        <!-- Loop Started -->
         <div class="card">
-          <h2>Cosmetic Procedures</h2>
-          <h6>Keep your skin free from things you don’t like.
-          </h6>
+          <h2><a href="<?php echo esc_url($category_link) ?>"><?php echo $category->name ?></a></h2>
+          <h6><?php echo $category->description ?></h6>
           <div class="overlay"></div>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cosmetics.jpg" alt="" class="absolute top-0 left-0 object-cover h-full w-full
+          <img src="<?php echo $image; ?>" alt="" class="absolute top-0 left-0 object-cover h-full w-full
           ">
         </div>
+        <!-- Loop Ended -->
       <?php
       }
       ?>
+      <!-- Post Calling Loop Ends -->
     </div>
   </div>
-  <div id="section-footer">
+  <!-- <div id="section-footer">
     <button class="button primary"><a href="#">View All Services</a></button>
-  </div>
+  </div> -->
 </section>
-<div id="offers">
+<div id="offers" class="hidden">
   <div id="top-header">
     <div class="container mx-auto">
       <h5>Current Offers</h5>
@@ -144,7 +158,7 @@
   <div class="stories-content">
     <div class="stories-slider">
       <?php
-      for ($x = 0; $x < 3; $x++) {
+      for ($x = 0; $x < 5; $x++) {
       ?>
         <div class="card">
           <div class="card-content">

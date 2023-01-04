@@ -2,6 +2,8 @@ jQuery(document).ready(function ($) {
   setTimeout(() => {
     $('#load').addClass('opacity-0 !-z-50');
   }, 500);
+  $('.menu-item-has-children').attr('data-dropdown', '');
+  $('.menu-item-has-children > a').attr('data-dropdown-button', '');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -40,5 +42,25 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       remove_class_on_scroll();
     }
+  });
+
+  // Dropdown
+  document.addEventListener('click', (e) => {
+    const isDropdownButton = e.target.matches('[data-dropdown-button]');
+    if (!isDropdownButton && e.target.closest(['[data-dropdown]']) != null)
+      return;
+
+    let currentDropdown;
+    if (isDropdownButton) {
+      currentDropdown = e.target.closest('[data-dropdown]');
+      currentDropdown.classList.toggle('dropdown-active');
+    }
+
+    document
+      .querySelectorAll('[data-dropdown].dropdown-active')
+      .forEach((dropdown) => {
+        if (dropdown === currentDropdown) return;
+        dropdown.classList.remove('dropdown-active');
+      });
   });
 });

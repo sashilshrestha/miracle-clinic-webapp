@@ -19,30 +19,59 @@ get_header();
   <div class="container mx-auto py-9">
     <div class="top-news">
       <?php
-      for ($x = 0; $x < 3; $x++) {
+      $args = array(
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+        'order' => 'DESC',
+        'orderby' => 'publish_date',
+      );
+      $newsposts = new WP_Query($args);
+
+      while ($newsposts->have_posts()) :
+        $newsposts->the_post();
+
+        $thumb_id = get_post_thumbnail_id();
+        $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
       ?>
         <div class="top-card">
           <div class="overlay"></div>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" alt="">
+          <img src="<?php echo $thumb_url[0] ?>" alt="">
           <div class="card-content">
             <p>12th July, 2023</p>
-            <h1><a href="">Pokemon Sword and Shield Are Holding a New Gigantamax Pokemon Event</a></h1>
+            <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
           </div>
         </div>
       <?php
-      }
+        $not_in_three[] = get_the_ID();
+      endwhile;
+      wp_reset_postdata();
       ?>
     </div>
     <div class="news-card-container">
       <div class="container mx-auto">
         <div class="grid grid-cols-12 gap-6">
           <?php
-          for ($x = 0; $x < 9; $x++) {
+          $args = array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+            'order' => 'DESC',
+            'orderby' => 'publish_date',
+            'post__not_in' => $not_in_three,
+          );
+          $newsposts = new WP_Query($args);
+
+          while ($newsposts->have_posts()) :
+            $newsposts->the_post();
+
+            $thumb_id = get_post_thumbnail_id();
+            $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           ?>
             <div class="card ">
-              <img src="https://media.istockphoto.com/id/1182641010/photo/i-love-working-from-home.jpg?b=1&s=170667a&w=0&k=20&c=2Detuk6nIrbeZWmEKiGCIM7nvoGd04VWTXtmxQYYmp4=" alt="">
+              <img src="<?php echo $thumb_url[0] ?>" alt="">
               <div class="card-content">
-                <h4>5 Habits That Slowly Damage Your Skin</h4>
+                <h4><?php the_title() ?></h4>
                 <p>Get Insights, Information and Care Tips about Skin Hair and Aesthetic Delivered Unsubscribe at any time...</p>
                 <div class="readmore">
                   <a href="<?php the_permalink(); ?>">Read Full Article >></a>
@@ -51,7 +80,8 @@ get_header();
               </div>
             </div>
           <?php
-          }
+          endwhile;
+          wp_reset_postdata();
           ?>
         </div>
       </div>

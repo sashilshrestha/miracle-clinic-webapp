@@ -181,7 +181,7 @@
   @include height(780);
   .why-img {
     @apply absolute top-0 left-0 h-full;
-    @include width(705);
+    @include width(650);
     &::before {
       @apply absolute top-0 left-0 w-full h-full;
       content: '';

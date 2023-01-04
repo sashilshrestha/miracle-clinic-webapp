@@ -231,21 +231,35 @@
     <div class="container mx-auto">
       <div class="grid grid-cols-12 gap-6">
         <?php
-        for ($x = 0; $x < 3; $x++) {
+        $args = array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'posts_per_page' => 3,
+          'order' => 'DESC',
+          'orderby' => 'publish_date',
+        );
+        $newsposts = new WP_Query($args);
+
+        while ($newsposts->have_posts()) :
+          $newsposts->the_post();
+
+          $thumb_id = get_post_thumbnail_id();
+          $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
         ?>
           <div class="card ">
-            <img src="https://media.istockphoto.com/id/1182641010/photo/i-love-working-from-home.jpg?b=1&s=170667a&w=0&k=20&c=2Detuk6nIrbeZWmEKiGCIM7nvoGd04VWTXtmxQYYmp4=" alt="">
+            <img src="<?php echo $thumb_url[0] ?>" alt="">
             <div class="card-content">
-              <h4>5 Habits That Slowly Damage Your Skin</h4>
+              <h4><?php the_title() ?></h4>
               <p>Get Insights, Information and Care Tips about Skin Hair and Aesthetic Delivered Unsubscribe at any time...</p>
               <div class="readmore">
-                <a href="">Read Full Article >></a>
-                <span>Mar 10, 2022</span>
+                <a href="<?php the_permalink(); ?>">Read Full Article >></a>
+                <span><?php echo get_the_date() ?></span>
               </div>
             </div>
           </div>
         <?php
-        }
+        endwhile;
+        wp_reset_postdata();
         ?>
       </div>
     </div>

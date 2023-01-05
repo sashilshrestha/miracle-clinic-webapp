@@ -148,6 +148,32 @@ function prithak_show_post_thumbnail_column($prithak_columns, $prithak_id)
 	}
 }
 
+// ----------------------------- Custom Taxonomy for Custom Post -----------------------------
+function taxonomies_services()
+{
+	$labels = array(
+		'name'              => _x('Services Categories', 'taxonomy general name'),
+		'singular_name'     => _x('Services Category', 'taxonomy singular name'),
+		'search_items'      => __('Search Services Categories'),
+		'all_items'         => __('All Services Categories'),
+		'parent_item'       => __('Parent Services Category'),
+		'parent_item_colon' => __('Parent Services Category:'),
+		'edit_item'         => __('Edit Services Category'),
+		'update_item'       => __('Update Services Category'),
+		'add_new_item'      => __('Add New Services Category'),
+		'new_item_name'     => __('New Services Category'),
+		'menu_name'         => __('Services Categories'),
+	);
+	$args = array(
+		'labels' => $labels,
+		'hierarchical' => true,
+		'show_in_rest' => true,
+		'show_admin_column' => true,
+	);
+	register_taxonomy('services_category', 'services', $args);
+}
+add_action('init', 'taxonomies_services', 0);
+
 // ----------------------------- Custom slider post type -----------------------------
 function gk_custom_slider()
 {
@@ -165,23 +191,23 @@ function gk_custom_slider()
 		'show_in_rest' => true,
 		'menu_position' => 10,
 		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes'],
-		'taxonomies' => array('category')
+		'taxonomies' => array('services_category')
 	]);
 }
 add_action('init', 'gk_custom_slider');
 
-// ----------------------------- Custom blog post type -----------------------------
-function gk_custom_blogs()
+// ----------------------------- Results post type -----------------------------
+function gk_custom_results()
 {
-	register_post_type('blogs', [
-		'rewrite' => ['slug' => 'blogs'],
+	register_post_type('results', [
+		'rewrite' => ['slug' => 'results'],
 		'labels' => [
-			'name' => 'Blogs',
-			'singular_name' => 'Blog',
-			'add_new_item' => 'Add New Blog',
-			'edit_item' => 'Edit Blog',
+			'name' => 'Results',
+			'singular_name' => 'Result',
+			'add_new_item' => 'Add New Result',
+			'edit_item' => 'Edit Result',
 		],
-		'menu_icon' => 'dashicons-welcome-write-blog',
+		'menu_icon' => 'dashicons-admin-users',
 		'public' => true,
 		'has_archive' => true,
 		'show_in_rest' => true,
@@ -189,8 +215,9 @@ function gk_custom_blogs()
 		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes', 'taxonomy'],
 	]);
 }
-add_action('init', 'gk_custom_blogs');
+add_action('init', 'gk_custom_results');
 
+// ----------------------------- Adding class name to menu -----------------------------
 function anchor_menu_add_class($atts, $item, $args)
 {
 	if ($item->title == 'Home') {

@@ -1,11 +1,15 @@
 <?php get_header() ?>
+<?php
+$thumb_id = get_post_thumbnail_id();
+$thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+?>
 <main class="pt-[16.25rem]">
   <div class="container mx-auto">
     <div class="flex">
       <div class="flex flex-col justify-center w-6/12 pr-10 hero-content">
-        <h6>Welcome to Miracle Skin Care</h6>
-        <h1 class="font-bolder text-6xl mb-2 tracking-tighter">When they ask you how you’ll tell it’s Miracle </h1>
-        <p class="mb-4">We are a multi-disciplinary aesthetic derma care clinic in Kathmandu. Get trusted treatment with advanced technology and expertise to transform your skin, hair and aesthetic health.
+        <h6><?php echo get_field('home_page_subtitle'); ?></h6>
+        <h1 class="font-bolder text-6xl mb-2 tracking-tighter"><?php echo get_field('home_page_title'); ?></h1>
+        <p class="mb-4"><?php echo get_field('home_page_description'); ?>
         </p>
         <div>
           <button class="button primary mr-2"><a href="#">Send Enquiry</a></button>
@@ -13,7 +17,7 @@
         </div>
       </div>
       <div class="w-6/12 hero-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" alt="" class="w-full h-full object-cover">
+        <img src="<?php echo $thumb_url[0] ?>" alt="" class="w-full h-full object-cover">
       </div>
     </div>
   </div>
@@ -51,10 +55,12 @@
     <div class="services-slider">
       <!-- Post Calling Loop Started -->
       <?php
-      $categories = get_categories(array(
-        'orderby' => 'name',
-        'order' => 'ASC'
-      ));
+      $args = array(
+        'taxonomy'   => 'services_category',
+        'hide_empty' => false,
+      );
+
+      $categories = get_terms($args);
       foreach ($categories as $category) {
         $category_link = get_category_link($category->term_id);
         $category_id = $category->term_id;
@@ -77,9 +83,9 @@
       <!-- Post Calling Loop Ends -->
     </div>
   </div>
-  <!-- <div id="section-footer">
-    <button class="button primary"><a href="#">View All Services</a></button>
-  </div> -->
+  <div id="section-footer">
+    <!-- <button class="button primary"><a href="#">View All Services</a></button> -->
+  </div>
 </section>
 <div id="offers" class="hidden">
   <div id="top-header">

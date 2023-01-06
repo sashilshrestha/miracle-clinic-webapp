@@ -87,7 +87,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     <!-- <button class="button primary"><a href="#">View All Services</a></button> -->
   </div>
 </section>
-<div id="offers" class="hidden">
+<!-- <div id="offers" class="hidden">
   <div id="top-header">
     <div class="container mx-auto">
       <h5>Current Offers</h5>
@@ -122,8 +122,8 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
   <div id="section-footer">
     <button class="button primary"><a href="#">View All Offers</a></button>
   </div>
-</div>
-<div id="why">
+</div> -->
+<div id="why" class="mb-20">
   <div class="why-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/why.png" alt="" class="w-full h-full object-cover"></div>
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-6 h-full place-content-center">
@@ -153,6 +153,80 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     </div>
   </div>
 </div>
+<div id="team">
+  <div id="top-header">
+    <div class="container mx-auto">
+      <h5>Meet Our Team</h5>
+      <h2>Experts with empathy, Ready to help you</h2>
+      <h6>Our expert doctors and practitioners serve you with the highest quality derma care.</h6>
+    </div>
+  </div>
+  <div class="team-content">
+    <div class="container mx-auto">
+      <!-- <div class="flex justify-center flex-wrap gap-16">
+        <?php
+        for ($x = 0; $x < 6; $x++) {
+        ?>
+          <div class="person-container">
+            <div class="person-circle">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mohan-bhusal.png" alt="">
+            </div>
+            <h1>Dr.Mohan Bhusal</h1>
+            <h6>Dermato-venereologist, Laser and Hair Specialist
+            </h6>
+          </div>
+        <?php
+        }
+        ?>
+        <div class="person-container">
+          <div class="person-circle">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/elisha-bhattrai.png" alt="">
+          </div>
+          <h1>Dr. Elisha Bhattrai</h1>
+          <h6>Dermato-venereologist, Laser and Hair Specialist
+          </h6>
+        </div>
+      </div> -->
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team.png" alt="" class="w-full object-contain" style="height: 38rem">
+    </div>
+  </div>
+  <div id="section-footer">
+    <button class="button primary"><a href="#">View All Team Member</a></button>
+  </div>
+</div>
+<div id="testimonials" class="relative">
+  <div id="top-header">
+    <div class="container mx-auto">
+      <h5>Testimonials</h5>
+      <h2>Trusted by people who wanted transformation.</h2>
+    </div>
+  </div>
+  <div class="container mx-auto">
+    <div class="grid grid-cols-12 testimonial-container gap-6">
+      <div class="testimonial-message six flex flex-col pt-36 relative">
+        <div class="slider-testimonial">
+          <?php
+          for ($x = 1; $x <= 3; $x++) {
+          ?>
+            <div>
+              <p class="text text-xl mb-2 tracking-tight">We have been recruiting from the Culinary Arts for the past 4 years and I must say it has been a real pleasure to have the students on board. They are well trained, well behaved and mannered. Most of the chefs recruited have reached good positions in a short time.
+              </p>
+              <h3 class="text-2xl font-bold">Shreay Pant</h3>
+              <h5 class="text-lg font-normal italic">Beatician</h5>
+            </div>
+          <?php
+          }
+          ?>
+        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/quote.png" alt="" class="absolute -left-10 top-14" style="z-index: -1">
+      </div>
+      <div class="testimonial-image six">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/why.png" alt="" style="height: 687px" class="object-cover">
+      </div>
+    </div>
+  </div>
+  <div class="yellow-overlay bg-primary-mid-light absolute top-0 left-0 -z-10" style="width: 55%; height:68%"></div>
+</div>
 <div id="stories">
   <div id="top-header">
     <div class="container mx-auto">
@@ -179,46 +253,6 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
       <?php
       }
       ?>
-    </div>
-  </div>
-  <div id="section-footer">
-    <button class="button primary"><a href="#">View All Services</a></button>
-  </div>
-</div>
-<div id="team">
-  <div id="top-header">
-    <div class="container mx-auto">
-      <h5>Meet Our Team</h5>
-      <h2>Experts with empathy, Ready to help you</h2>
-      <h6>Our expert doctors and practitioners serve you with the highest quality derma care.</h6>
-    </div>
-  </div>
-  <div class="team-content">
-    <div class="container mx-auto">
-      <div class="flex justify-center flex-wrap gap-16">
-        <?php
-        for ($x = 0; $x < 6; $x++) {
-        ?>
-          <div class="person-container">
-            <div class="person-circle">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mohan-bhusal.png" alt="">
-            </div>
-            <h1>Dr.Mohan Bhusal</h1>
-            <h6>Dermato-venereologist, Laser and Hair Specialist
-            </h6>
-          </div>
-        <?php
-        }
-        ?>
-        <div class="person-container">
-          <div class="person-circle">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/elisha-bhattrai.png" alt="">
-          </div>
-          <h1>Dr. Elisha Bhattrai</h1>
-          <h6>Dermato-venereologist, Laser and Hair Specialist
-          </h6>
-        </div>
-      </div>
     </div>
   </div>
   <div id="section-footer">

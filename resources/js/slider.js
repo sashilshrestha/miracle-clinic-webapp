@@ -2990,4 +2990,12 @@ jQuery(document).ready(function ($) {
     centerMode: true,
     variableWidth: true,
   });
+  $('.slider-testimonial').slick({
+    // infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    // centerMode: true,
+    // variableWidth: true,
+  });
 });

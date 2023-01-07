@@ -318,6 +318,27 @@
   .testimonial-container {
     .six {
       @apply col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6;
+      .slider-testimonial {
+        position: relative;
+        .slick-arrow {
+          background-color: $dark;
+          color: $white;
+          border-radius: 999px;
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 300px;
+
+          &.slick-next {
+            right: 0;
+          }
+          &.slick-prev {
+            left: 86%;
+          }
+        }
+      }
     }
   }
 }

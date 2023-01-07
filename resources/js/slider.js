@@ -2989,12 +2989,13 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
     centerMode: true,
     variableWidth: true,
+    arrows: true,
   });
   $('.slider-testimonial').slick({
     // infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
+    arrows: true,
     // centerMode: true,
     // variableWidth: true,
   });

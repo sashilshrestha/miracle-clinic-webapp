@@ -17,7 +17,7 @@ get_header();
 </header>
 <main id="contact-page">
   <div class="container mx-auto">
-    <div class="content grid grid-cols-12 gap-12">
+    <div class="content grid grid-cols-12">
       <div class="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-5 contact-left">
         <div class="detail">
           <h5>Contact Us</h5>
@@ -37,7 +37,9 @@ get_header();
         </div>
       </div>
       <div class="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-7 contact-right">
-
+        <div class="px-10 py-6">
+          <?php echo do_shortcode('[wpforms id="247" title="false"]'); ?>
+        </div>
       </div>
     </div>
   </div>

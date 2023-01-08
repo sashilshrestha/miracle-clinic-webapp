@@ -11,7 +11,7 @@ h2,
 h3,
 h4,
 h5 {
-  @apply tracking-tight;
+  letter-spacing: -0.03rem;
   margin: 0;
 }
 
@@ -34,7 +34,7 @@ a {
 }
 
 .page--header {
-  @include padding(200, 0, 100, 0);
+  @include padding(180, 0, 100, 0);
   background-color: $light;
   display: flex;
   justify-content: center;
@@ -50,7 +50,7 @@ a {
       text-transform: capitalize;
     }
     p {
-      @include font-size(28);
+      @include font-size(20);
     }
   }
 }

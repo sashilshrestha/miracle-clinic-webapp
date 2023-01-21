@@ -205,18 +205,37 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     <div class="grid grid-cols-12 testimonial-container gap-6">
       <div class="testimonial-message six flex flex-col pt-36 relative">
         <div class="slider-testimonial">
+          <!-- Post Calling Loop Started -->
           <?php
-          for ($x = 1; $x <= 3; $x++) {
+          $args = array(
+            'post_type' => 'testimonials',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+            'order' => 'ASC',
+            'orderby' => 'publish_date',
+          );
+          $teamsposts = new WP_Query($args);
+
+          while ($teamsposts->have_posts()) :
+            $teamsposts->the_post();
+
+            $thumb_id = get_post_thumbnail_id();
+            $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           ?>
+            <!-- Loop Started -->
             <div>
-              <p class="text text-xl mb-2 tracking-tight">We have been recruiting from the Culinary Arts for the past 4 years and I must say it has been a real pleasure to have the students on board. They are well trained, well behaved and mannered. Most of the chefs recruited have reached good positions in a short time.
+              <p class="text text-xl mb-2 tracking-tight">
+                <?php echo wp_strip_all_tags(get_the_content()); ?>
               </p>
-              <h3 class="text-2xl font-bold">Shreay Pant</h3>
-              <h5 class="text-lg font-normal italic">Beatician</h5>
+              <h3 class="text-2xl font-bold"><?php the_title(); ?></h3>
+              <!-- <h5 class="text-lg font-normal italic">Beatician</h5> -->
             </div>
+            <!-- Loop Ended -->
           <?php
-          }
+          endwhile;
+          wp_reset_postdata();
           ?>
+          <!-- Post Calling Loop Ends -->
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/quote.png" alt="" class="absolute -left-10 top-14" style="z-index: -1">
       </div>
@@ -262,7 +281,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 <div id="blogs">
   <div id="top-header">
     <div class="container mx-auto">
-      <h5>Our Blogs</h5>
+      <h5>News & Blogs</h5>
       <h2>Readings that inspire</h2>
       <h6>Browse our articles to inspire yourself on your skin, hair and aesthetic journey</h6>
     </div>

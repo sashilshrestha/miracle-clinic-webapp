@@ -37,7 +37,7 @@ get_header();
         </div>
       </div>
       <div class="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-7 contact-right">
-        <div class="px-10 py-6">
+        <div class="px-10 py-2">
           <?php echo do_shortcode('[wpforms id="247" title="false"]'); ?>
         </div>
       </div>

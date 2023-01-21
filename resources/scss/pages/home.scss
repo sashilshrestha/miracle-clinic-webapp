@@ -304,10 +304,10 @@
         }
       }
       h1 {
-        @apply text-4xl tracking-tight font-extrabold text-center mt-6 my-3 w-max text-dark;
+        @apply text-2xl font-extrabold text-center mt-6 mb-0 w-max text-dark;
       }
       h6 {
-        @apply text-2xl font-normal text-center;
+        @apply text-lg font-normal text-center;
         line-height: 120%;
       }
     }

@@ -207,7 +207,7 @@ function gk_custom_results()
 			'add_new_item' => 'Add New Result',
 			'edit_item' => 'Edit Result',
 		],
-		'menu_icon' => 'dashicons-admin-users',
+		'menu_icon' => 'dashicons-pressthis',
 		'public' => true,
 		'has_archive' => true,
 		'show_in_rest' => true,
@@ -216,6 +216,48 @@ function gk_custom_results()
 	]);
 }
 add_action('init', 'gk_custom_results');
+
+// ----------------------------- Teams post type -----------------------------
+function gk_custom_teams()
+{
+	register_post_type('teams', [
+		'rewrite' => ['slug' => 'teams'],
+		'labels' => [
+			'name' => 'Teams',
+			'singular_name' => 'Team',
+			'add_new_item' => 'Add New Team',
+			'edit_item' => 'Edit Team',
+		],
+		'menu_icon' => 'dashicons-admin-users',
+		'public' => true,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'menu_position' => 15,
+		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes', 'taxonomy'],
+	]);
+}
+add_action('init', 'gk_custom_teams');
+
+// ----------------------------- Testimonials post type -----------------------------
+function gk_custom_testimonials()
+{
+	register_post_type('testimonials', [
+		'rewrite' => ['slug' => 'testimonials'],
+		'labels' => [
+			'name' => 'Testimonials',
+			'singular_name' => 'Testimonial',
+			'add_new_item' => 'Add New Testimonial',
+			'edit_item' => 'Edit Testimonial',
+		],
+		'menu_icon' => 'dashicons-groups',
+		'public' => true,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'menu_position' => 15,
+		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes', 'taxonomy'],
+	]);
+}
+add_action('init', 'gk_custom_testimonials');
 
 // ----------------------------- Adding class name to menu -----------------------------
 function anchor_menu_add_class($atts, $item, $args)

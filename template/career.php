@@ -15,14 +15,14 @@ get_header();
     <p>We believe in a work environment where our team feels supported, respected and understood.</p>
   </div>
 </header>
-<!-- <main id="career-page">
+<main id="career-page">
   <div class="container mx-auto">
     <div id="offers" class="my-20">
       <div class="offers-content">
         <div class="container mx-auto">
           <div class="flex flex-wrap gap-6 justify-center">
             <?php
-            for ($x = 0; $x < 2; $x++) {
+            for ($x = 0; $x < 8; $x++) {
             ?>
               <div class="card">
                 <div>
@@ -39,14 +39,14 @@ get_header();
       </div>
     </div>
   </div>
-</main> -->
+</main>
 <main class="text-center text-3xl font-bold py-10">
   <h3>No available Jobs</h3>
 </main>
 <div id="queries">
   <div class="container mx-auto flex flex-col items-center">
     <h1 class="text-center !text-4xl" style="line-height: 140% !important">Can’t find the position you’re looking for? Send your resume and we’ll contact you when the next post relevant to your CV, is vacant.</h1>
-    <button class="button primary !rounded-full"><a href="#" class="text-2xl">hr@miracle.com</a></button>
+    <button class="button primary !rounded-full"><a href="#" class="text-2xl">miracleskinhair@gmail.com</a></button>
   </div>
 </div>
 <?php

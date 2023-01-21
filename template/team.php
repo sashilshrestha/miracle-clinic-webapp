@@ -21,28 +21,38 @@ get_header();
     <div class="team-content py-28">
       <div class="container mx-auto">
         <div class="flex justify-center flex-wrap gap-16">
+          <!-- Post Calling Loop Started -->
           <?php
-          for ($x = 0; $x < 6; $x++) {
+          $args = array(
+            'post_type' => 'teams',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+            'order' => 'ASC',
+            'orderby' => 'publish_date',
+          );
+          $teamsposts = new WP_Query($args);
+
+          while ($teamsposts->have_posts()) :
+            $teamsposts->the_post();
+
+            $thumb_id = get_post_thumbnail_id();
+            $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           ?>
+            <!-- Loop Started -->
             <div class="person-container">
               <div class="person-circle">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mohan-bhusal.png" alt="">
+                <img src="<?php echo $thumb_url[0] ?>" alt="">
               </div>
-              <h1>Dr.Mohan Bhusal</h1>
+              <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
               <h6>Dermato-venereologist, Laser and Hair Specialist
               </h6>
             </div>
+            <!-- Loop Ended -->
           <?php
-          }
+          endwhile;
+          wp_reset_postdata();
           ?>
-          <div class="person-container">
-            <div class="person-circle">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/elisha-bhattrai.png" alt="">
-            </div>
-            <h1>Dr. Elisha Bhattrai</h1>
-            <h6>Dermato-venereologist, Laser and Hair Specialist
-            </h6>
-          </div>
+          <!-- Post Calling Loop Ends -->
         </div>
       </div>
     </div>

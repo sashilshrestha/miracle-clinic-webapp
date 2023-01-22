@@ -12,12 +12,23 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
         <p class="mb-4"><?php echo get_field('home_page_description'); ?>
         </p>
         <div>
-          <button class="button primary mr-2"><a href="#">Send Enquiry</a></button>
+          <?php
+          $page = get_page_by_title('contact');
+          $link = get_permalink($page->ID);
+          ?><a href="<?php echo $link; ?>">
+            <button class="button primary mr-2">Send Enquiry</button>
+          </a>
           <!-- <button class="button ghost">Learn More</button> -->
         </div>
       </div>
       <div class="w-6/12 hero-img">
-        <img src="<?php echo $thumb_url[0] ?>" alt="" class="w-full h-full object-cover">
+        <?php
+        for ($x = 1; $x <= 4; $x++) {
+        ?>
+          <img src="<?php echo get_field('image_slider_' . $x . '') ?>" alt="" class="w-full h-full object-cover">
+        <?php
+        }
+        ?>
       </div>
     </div>
   </div>
@@ -134,20 +145,41 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           <h2>Why choose Miracle ?</h2>
         </div>
         <div class="grid grid-cols-12 gap-8">
-          <?php
-          for ($x = 0; $x < 4; $x++) {
-          ?>
-            <div class="point">
-              <div class="icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/result.svg" />
-              </div>
-              <h4>Modern Technology, Faster Treatments
-              </h4>
-              <p>We utilise what’s best in technological advances to make your treatment faster.</p>
+          <div class="point">
+            <div class="icon">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/result.svg" />
             </div>
-          <?php
-          }
-          ?>
+            <h4>Empathy-Driven Counselling
+            </h4>
+            <p>You experience comfort at every stage of our services driven by empathy.</p>
+          </div>
+          <div class="point">
+            <div class="icon">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/result.svg" />
+            </div>
+            <h4>Guaranteed Results
+            </h4>
+            <p>Get trusted results from expert dermatologists and practitioners with years of experience.</p>
+          </div>
+
+          <div class="point">
+            <div class="icon">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/result.svg" />
+            </div>
+            <h4>Modern Technology, Faster Treatments
+            </h4>
+            <p>We utilize what’s best in technological advances to make your treatment faster.</p>
+          </div>
+
+          <div class="point">
+            <div class="icon">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/result.svg" />
+            </div>
+            <h4>Designed For Your Safety
+            </h4>
+            <p>Our clinical facility and procedures are designed for your safety at every stage of treatment.</p>
+          </div>
+
         </div>
       </div>
     </div>

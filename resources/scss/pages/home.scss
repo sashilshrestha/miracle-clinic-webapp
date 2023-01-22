@@ -10,6 +10,29 @@
 }
 .hero-img {
   height: 30rem;
+  cursor: pointer;
+
+  .slick-list {
+    height: inherit;
+
+    div {
+      height: inherit;
+    }
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: flex-end;
+    bottom: #{toRem(-35)};
+
+    li {
+      @apply transition-all;
+      border-radius: 999px;
+      border: 1px solid $dark;
+      &.slick-active {
+        background-color: $dark;
+      }
+    }
+  }
 }
 
 #featured-services {
@@ -181,7 +204,7 @@
   @include height(780);
   .why-img {
     @apply absolute top-0 left-0 h-full;
-    @include width(650);
+    @include width(790);
     &::before {
       @apply absolute top-0 left-0 w-full h-full;
       content: '';

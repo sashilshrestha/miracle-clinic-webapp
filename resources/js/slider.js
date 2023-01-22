@@ -2999,4 +2999,14 @@ jQuery(document).ready(function ($) {
     // centerMode: true,
     // variableWidth: true,
   });
+  $('.hero-img').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    lazyLoad: 'progressive'
+  });
 });

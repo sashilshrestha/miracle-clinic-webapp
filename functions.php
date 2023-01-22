@@ -259,6 +259,27 @@ function gk_custom_testimonials()
 }
 add_action('init', 'gk_custom_testimonials');
 
+// ----------------------------- Careers post type -----------------------------
+function gk_custom_careers()
+{
+	register_post_type('careers', [
+		'rewrite' => ['slug' => 'careers'],
+		'labels' => [
+			'name' => 'Careers',
+			'singular_name' => 'Career',
+			'add_new_item' => 'Add New Career',
+			'edit_item' => 'Edit Career',
+		],
+		'menu_icon' => 'dashicons-networking',
+		'public' => true,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'menu_position' => 15,
+		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes', 'taxonomy'],
+	]);
+}
+add_action('init', 'gk_custom_careers');
+
 // ----------------------------- Adding class name to menu -----------------------------
 function anchor_menu_add_class($atts, $item, $args)
 {

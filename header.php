@@ -19,7 +19,9 @@
 		<nav id="main-nav">
 			<div class="top-header bg-dark">
 				<div class="container mx-auto">
-					.
+					<p><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/mail-icon.png">miracleskinhair@gmail.com</p> <span class="mx-3">|</span>
+					<p><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/phone-icon.png">01-5919826, 9817125774</p>
+
 				</div>
 			</div>
 			<div class="navbar">
@@ -27,7 +29,9 @@
 					<div class="navbar-brand">
 						<?php echo get_custom_logo(); ?>
 					</div>
+
 					<!-- The WordPress Menu goes here -->
+					
 					<?php
 					wp_nav_menu(
 						array(

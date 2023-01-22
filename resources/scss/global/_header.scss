@@ -7,6 +7,24 @@ header {
     width: 100%;
     backdrop-filter: blur(20px);
 
+    .top-header {
+      .container {
+        color: $white;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 0.95rem;
+        padding: 0.3rem 0;
+
+        p {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          img {
+            height: 1.2rem;
+          }
+        }
+      }
+    }
     .navbar {
       .container {
         display: flex;

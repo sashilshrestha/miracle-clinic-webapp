@@ -235,6 +235,9 @@
           @apply col-span-6;
           .icon {
             @apply w-20 h-20 rounded-full border-dark border-2 p-2 flex justify-center items-center;
+            img {
+              height: 2.5rem;
+            }
           }
           h4 {
             @apply text-3xl my-2;

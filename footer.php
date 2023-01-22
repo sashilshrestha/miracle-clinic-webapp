@@ -6,7 +6,7 @@
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.png" alt="">
           <h5 class="font-bold text-xl mt-4">Miracle Skin, Hair and Aesthetic Clinic Pvt. Ltd.</h5>
           <p>
-            All rights reserved. Terms and Conditions, Privacy Policy
+            Between KL Tower and Bhatbhateni Store, Dampa Complex, Chabahil, Kathmandu, Nepal
           </p>
         </div>
         <div class="column right">
@@ -36,11 +36,11 @@
             <div class="mb-6">
               <div class="link-heading">Opening Hours</div>
               <p>Sunday to Friday: 9am to 7pm</p>
-              <p>Sunday to Friday: 9am to 7pm</p>
+              <p>Saturday: 11am to 5pm</p>
             </div>
             <div>
-              <div class="link-heading">Follow Us:</div>
-              <p>Sunday to Friday: 9am to 7pm</p>
+              <div class="link-heading">Follow Us</div>
+              <p>Telephone Call: +977 01-5919826</p>
               <p>Sunday to Friday: 9am to 7pm</p>
             </div>
           </div>
@@ -49,7 +49,7 @@
     </div>
   </div>
   <div id="bottom-footer">
-    <p>Copyright © 2022, Miracle Skin, Hair and Aesthetic Clinic Pvt. Ltd. All rights reserved. Terms and Conditions, Privacy Policy</p>
+    <p>Copyright © <?php echo date('Y'); ?>, Miracle Skin, Hair and Aesthetic Clinic Pvt. Ltd. All rights reserved. Terms and Conditions, Privacy Policy</php>
   </div>
 </footer>
 <?php wp_footer(); ?>

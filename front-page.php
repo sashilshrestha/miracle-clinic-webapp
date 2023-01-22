@@ -8,7 +8,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     <div class="flex">
       <div class="flex flex-col justify-center w-6/12 pr-10 hero-content">
         <h6><?php echo get_field('home_page_subtitle'); ?></h6>
-        <h1 class="font-bolder text-6xl mb-2 tracking-tighter"><?php echo get_field('home_page_title'); ?></h1>
+        <h1 class="font-bolder text-6xl mb-4 tracking-tighter"><?php echo get_field('home_page_title'); ?></h1>
         <p class="mb-4"><?php echo get_field('home_page_description'); ?>
         </p>
         <div>
@@ -147,7 +147,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
         <div class="grid grid-cols-12 gap-8">
           <div class="point">
             <div class="icon">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/result.svg" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/counseling.svg" />
             </div>
             <h4>Empathy-Driven Counselling
             </h4>
@@ -164,7 +164,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 
           <div class="point">
             <div class="icon">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/result.svg" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/technology.svg" />
             </div>
             <h4>Modern Technology, Faster Treatments
             </h4>
@@ -173,7 +173,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 
           <div class="point">
             <div class="icon">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/result.svg" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/safety.svg" />
             </div>
             <h4>Designed For Your Safety
             </h4>
@@ -278,7 +278,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
   </div>
   <div class="yellow-overlay bg-primary-mid-light absolute top-0 left-0 -z-10" style="width: 55%; height:68%"></div>
 </div>
-<div id="stories">
+<div id="stories" class="hidden">
   <div id="top-header">
     <div class="container mx-auto">
       <h5>Success Stories</h5>

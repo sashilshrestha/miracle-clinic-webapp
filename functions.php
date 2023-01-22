@@ -290,3 +290,7 @@ function anchor_menu_add_class($atts, $item, $args)
 	return $atts;
 }
 add_filter('nav_menu_link_attributes', 'anchor_menu_add_class', 10, 3);
+
+// ----------------------------- Registering menu -----------------------------
+register_nav_menu('services-menu', __('Services Menu'));
+register_nav_menu('links-menu', __('Links Menu'));

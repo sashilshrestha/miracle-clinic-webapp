@@ -13,7 +13,7 @@
         </p>
       </div>
       <div class="w-6/12 hero-img absolute right-0">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" alt="" class="w-full h-full object-cover">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about.png" alt="" class="w-full h-full object-cover">
       </div>
     </div>
   </section>

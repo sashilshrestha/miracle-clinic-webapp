@@ -12,25 +12,22 @@
         <div class="column right">
           <div class="services">
             <div class="link-heading">Our Services:</div>
-            <ul>
-              <li><a href="#">Cosmetics Procedures</a></li>
-              <li><a href="#">Hait Transplant</a></li>
-              <li><a href="#">Laser Hair Transplant</a></li>
-              <li><a href="#">Removal Treatment</a></li>
-              <li><a href="#">Skin Diseases</a></li>
-              <li><a href="#">Cosmetics Procedures</a></li>
-            </ul>
+            <?php
+            wp_nav_menu(array(
+              'theme_location' => 'services-menu',
+              'container' => false,
+            ));
+            ?>
+
           </div>
           <div class="important-link">
             <div class="link-heading">Important Links:</div>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Meet Doctors</a></li>
-              <li><a href="#">Meet Our Team</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
+            <?php
+            wp_nav_menu(array(
+              'theme_location' => 'links-menu',
+              'container' => false,
+            ));
+            ?>
           </div>
           <div class="details">
             <div class="mb-6">

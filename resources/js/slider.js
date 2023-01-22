@@ -2979,7 +2979,7 @@
 jQuery(document).ready(function ($) {
   $('.services-slider').slick({
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
   });
@@ -3007,6 +3007,6 @@ jQuery(document).ready(function ($) {
     fade: true,
     autoplay: true,
     autoplaySpeed: 2500,
-    lazyLoad: 'progressive'
+    lazyLoad: 'progressive',
   });
 });

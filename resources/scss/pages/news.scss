@@ -67,6 +67,13 @@
     .card {
       @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4;
       box-shadow: 0px 4px 25px 0px #00000010;
+
+      img {
+        height: 18rem;
+        width: 100%;
+        object-fit: cover;
+      }
+
       &-content {
         @apply p-4;
         h4 {

@@ -42,7 +42,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
         <div class="card shadow-md py- relative">
           <div class="px-8">
             <div class="title text-3xl font-bold tracking-tight"><?php echo get_field('service_' . $x . ''); ?></div>
-            <div class="learn-more">Learn More</div>
+            <!-- <div class="learn-more">Learn More</div> -->
           </div>
           <img src="<?php echo get_field('service_image_' . $x . ''); ?>" alt="" class="absolute h-full w-full object-cover rounded-md" style="z-index: -1">
         </div>
@@ -135,7 +135,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
   </div>
 </div> -->
 <div id="why" class="mb-20">
-  <div class="why-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/why.png" alt="" class="w-full h-full object-cover"></div>
+  <div class="why-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/why.jpg" alt="" class="w-full h-full object-cover" style="object-position: 18%"></div>
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-6 h-full place-content-center">
       <div class="col-span-4"></div>
@@ -272,21 +272,21 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/quote.png" alt="" class="absolute -left-10 top-14" style="z-index: -1">
       </div>
       <div class="testimonial-image six">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/why.png" alt="" style="height: 687px" class="object-cover">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial.png" alt="" style="height: 687px" class="object-cover">
       </div>
     </div>
   </div>
   <div class="yellow-overlay bg-primary-mid-light absolute top-0 left-0 -z-10" style="width: 55%; height:68%"></div>
 </div>
-<div id="stories" class="hidden">
-  <div id="top-header">
+<div id="stories">
+  <div id="top-header" class="hidden">
     <div class="container mx-auto">
       <h5>Success Stories</h5>
       <h2>Results that transform you</h2>
       <h6>Transformations that last forever</h6>
     </div>
   </div>
-  <div class="stories-content">
+  <div class="stories-content hidden">
     <div class="stories-slider">
       <?php
       for ($x = 0; $x < 5; $x++) {
@@ -306,7 +306,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
       ?>
     </div>
   </div>
-  <div id="section-footer">
+  <div id="section-footer" class="hidden">
     <button class="button primary"><a href="#">View All Services</a></button>
   </div>
 </div>

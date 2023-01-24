@@ -37,8 +37,11 @@
             </div>
             <div>
               <div class="link-heading">Follow Us</div>
-              <p>Telephone Call: +977 01-5919826</p>
-              <p>Sunday to Friday: 9am to 7pm</p>
+              <div class="social-media-links">
+                <a href="https://www.facebook.com/miracleskinhair" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com/miracleskinhair" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/instagram.png" alt=""></a>
+                <a href="https://www.tiktok.com/@miracle_skinclinic" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/tiktok.png" alt=""></a>
+              </div>
             </div>
           </div>
         </div>

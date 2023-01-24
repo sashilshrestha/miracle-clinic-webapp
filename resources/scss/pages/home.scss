@@ -203,7 +203,7 @@
   @include height(780);
   .why-img {
     @apply absolute top-0 left-0 h-full;
-    @include width(790);
+    @include width(700);
     &::before {
       @apply absolute top-0 left-0 w-full h-full;
       content: '';
@@ -394,7 +394,7 @@
         .readmore {
           @apply flex justify-between;
           a {
-            @apply font-medium text-text;
+            @apply tracking-tight text-yellow-700;
           }
           span {
             @apply italic;

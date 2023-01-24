@@ -88,7 +88,7 @@
       .readmore {
         @apply flex justify-between;
         a {
-          @apply font-medium text-text;
+          @apply tracking-tight text-yellow-700;
         }
         span {
           @apply italic;

@@ -331,9 +331,27 @@
       h1 {
         @apply text-2xl font-extrabold text-center mt-6 mb-0 w-max text-dark;
       }
-      h6 {
-        @apply text-lg font-normal text-center;
+      h5 {
+        @apply text-lg font-medium text-center;
         line-height: 120%;
+      }
+      p{
+        margin: 0.2rem 0 0;
+        font-size: 0.9rem;
+        line-height: 120%;
+        text-align: center;
+      }
+
+      &.main {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+
+        p {
+          font-size: 1rem;
+          line-height: 150%;
+          text-align: left;
+        }
       }
     }
   }

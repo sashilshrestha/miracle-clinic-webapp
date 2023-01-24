@@ -37,17 +37,22 @@
         .other-posts {
           .post-card {
             display: flex;
-            margin: 0 0 2rem;
+            margin: 0 0 1rem;
             img {
               width: 4.2rem;
               height: 4.2rem;
               object-fit: cover;
             }
             .post-description {
-              line-height: 120%;
-              font-size: 1.2rem;
               h5 {
                 color: $dark;
+                line-height: 130%;
+                font-size: 1rem;
+              }
+              a{
+                @apply text-yellow-800;
+                font-style: italic;
+                font-size: 0.8rem;
               }
             }
           }

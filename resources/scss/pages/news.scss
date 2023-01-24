@@ -56,7 +56,16 @@
         @apply text-3xl font-bold;
         a {
           font-weight: inherit;
+          &:hover {
+            @apply text-primary;
+          }
         }
+      }
+    }
+
+    &:hover {
+      .card-content {
+        transform: translateY(-10px);
       }
     }
   }
@@ -78,7 +87,7 @@
         @apply p-4;
         h4 {
           @apply text-2xl font-bold mb-3 tracking-tight;
-          line-height: 120%;
+          line-height: 140%;
         }
         p {
           @apply text-lg mb-11 text-text;

@@ -36,7 +36,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 ?>
 <main id="blogs-inner">
 	<header class="page--header">
-		<div class="container mx-auto">
+		<div class="container mx-auto !items-start">
 			<h1>
 				<?php the_title() ?>
 			</h1>
@@ -48,8 +48,19 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 			<img src="<?php echo $thumb_url[0]; ?>" alt="" class="main-image">
 			<div class="content grid grid-cols-12 gap-12 pt-6">
 				<div class="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-8">
-					<?php echo $id; ?>
-					<?php the_content(); ?>
+					<?php
+					if (!empty(get_field('article_link'))) {
+					?>
+						<div class="mt-5">
+							<a href="<?php echo get_field('article_link') ?>" class="btn btn-primary !text-dark" target="_blank">Read Full Article Here</a>
+						</div>
+					<?php
+					} else {
+						the_content();
+					?>
+					<?php
+					}
+					?>
 				</div>
 				<div class="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-4">
 					<aside>
@@ -81,7 +92,8 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 									<img src="<?php echo $thumb_url[0]; ?>" alt="" class="rounded-md mr-4">
 									<div class="post-description">
 										<h5 class="text text-sm"><?php the_title() ?></h5>
-										<p class="!text-xs">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam et laudantium porro officiis laborum!</p>
+										<a href="<?php the_permalink() ?>">Read More >></a>
+										<!-- <p class="!text-xs">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam et laudantium porro officiis laborum!</p> -->
 									</div>
 								</div>
 							<?php

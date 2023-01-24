@@ -38,8 +38,8 @@ get_header();
           <div class="overlay"></div>
           <img src="<?php echo $thumb_url[0] ?>" alt="">
           <div class="card-content">
-            <p>12th July, 2023</p>
-            <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
+            <p class="mb-4">12th July, 2023</p>
+            <h1 class=""><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
           </div>
         </div>
       <?php

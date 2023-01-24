@@ -233,7 +233,7 @@ function gk_custom_teams()
 		'has_archive' => true,
 		'show_in_rest' => true,
 		'menu_position' => 15,
-		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes', 'taxonomy'],
+		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes', 'taxonomy', 'excerpt'],
 	]);
 }
 add_action('init', 'gk_custom_teams');

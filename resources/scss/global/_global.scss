@@ -158,3 +158,69 @@ button {
     }
   }
 }
+
+.person-container {
+  @apply w-min flex flex-col items-center mb-6;
+
+  &:hover {
+    .person-circle {
+      border: 1rem solid #ffdc7f;
+      transform: scale(1);
+    }
+  }
+  .person-circle {
+    @apply rounded-full overflow-hidden bg-primary cursor-pointer flex justify-center;
+    width: 15rem;
+    height: 15rem;
+    transform: scale(0.9);
+    outline: 1rem solid #fcca444d;
+
+    img {
+      transform: scale(0.95) translateY(2rem);
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05) translateY(2.5rem);
+      }
+    }
+  }
+  h1 {
+    @apply text-2xl font-extrabold text-center mt-6 mb-0 w-max text-dark;
+  }
+  h5 {
+    @apply text-lg font-medium text-center;
+    line-height: 120%;
+  }
+  p {
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  &.main {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+    p {
+      font-size: 1rem;
+      line-height: 150%;
+      text-align: left;
+    }
+  }
+}
+
+tr {
+  font-size: 1.3rem;
+}
+td {
+  li {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    a {
+      color: $primary;
+    }
+  }
+}

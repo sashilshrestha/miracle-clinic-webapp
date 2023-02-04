@@ -335,7 +335,7 @@
         @apply text-lg font-medium text-center;
         line-height: 120%;
       }
-      p{
+      p {
         margin: 0.2rem 0 0;
         font-size: 0.9rem;
         line-height: 120%;
@@ -390,9 +390,12 @@
   .blog-content {
     .grid {
       .card {
-        @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4;
-        box-shadow: 0px 4px 25px 0px #00000010;
+        @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4 rounded-lg border border-gray-200  transition-all duration-300;
+        &:hover {
+          box-shadow: 0px 4px 25px 0px #00000010;
+        }
         img {
+          @apply rounded rounded-br-none rounded-bl-none;
           height: 18rem;
           width: 100%;
           object-fit: cover;

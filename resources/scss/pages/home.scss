@@ -233,7 +233,7 @@
         .point {
           @apply col-span-6;
           .icon {
-            @apply w-20 h-20 rounded-full border-dark border-2 p-2 flex justify-center items-center;
+            @apply w-20 h-20 rounded-full bg-gray-50 border-2 p-2 flex justify-center items-center;
             img {
               height: 2.5rem;
             }

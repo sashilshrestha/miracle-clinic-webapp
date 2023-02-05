@@ -1,7 +1,15 @@
 <?php get_header() ?>
-<header class="page--header">
+<?php
+$terms = get_the_terms(get_the_ID(), 'services_category');
+foreach ($terms as $term) {
+  $category_id = $term->term_id;
+  $image = get_field('category_thumbnail', 'category_' . $category_id);
+}
+?>
+<header class="page--header relative !pb-40 !pt-52">
   <div class="container mx-auto">
-    <h1><?php single_term_title(); ?></h1>
+    <img src="<?php echo $image; ?>" alt="" class="absolute top-0 left-0 w-full h-full object-cover  opacity-20">
+    <h1 class="z-10"><?php single_term_title(); ?></h1>
   </div>
 </header>
 <main class="container mx-auto">

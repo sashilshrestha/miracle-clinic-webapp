@@ -21,11 +21,11 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           <!-- <button class="button ghost">Learn More</button> -->
         </div>
       </div>
-      <div class="w-6/12 hero-img">
+      <div class="w-6/12 hero-img rounded-lg hover:shadow-lg transition-all duration-300">
         <?php
         for ($x = 1; $x <= 4; $x++) {
         ?>
-          <img src="<?php echo get_field('image_slider_' . $x . '') ?>" alt="" class="w-full h-full object-cover">
+          <img src="<?php echo get_field('image_slider_' . $x . '') ?>" alt="" class="w-full h-full object-cover rounded-lg">
         <?php
         }
         ?>

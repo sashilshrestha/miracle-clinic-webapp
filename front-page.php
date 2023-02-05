@@ -3,10 +3,10 @@
 $thumb_id = get_post_thumbnail_id();
 $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 ?>
-<main class="pt-[16.25rem]">
+<main class="pt-[16.25rem] max-md:pt-48">
   <div class="container mx-auto">
-    <div class="flex">
-      <div class="flex flex-col justify-center w-6/12 pr-10 hero-content">
+    <div class="flex max-md:flex-col-reverse">
+      <div class="flex flex-col justify-center w-6/12 pr-10 hero-content max-md:w-full">
         <h6><?php echo get_field('home_page_subtitle'); ?></h6>
         <h1 class="font-bolder text-6xl mb-4 tracking-tighter"><?php echo get_field('home_page_title'); ?></h1>
         <p class="mb-4"><?php echo get_field('home_page_description'); ?>
@@ -21,7 +21,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           <!-- <button class="button ghost">Learn More</button> -->
         </div>
       </div>
-      <div class="w-6/12 hero-img rounded-lg hover:shadow-lg transition-all duration-300">
+      <div class="w-6/12 hero-img rounded-lg hover:shadow-lg transition-all duration-300 max-md:w-full">
         <?php
         for ($x = 1; $x <= 4; $x++) {
         ?>
@@ -33,15 +33,15 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     </div>
   </div>
 </main>
-<section id="featured-services">
+<section id="featured-services" class="max-md:!h-full max-md:py-16 max-md:!hidden">
   <div class="container mx-auto">
-    <div class="grid grid-cols-12 gap-6 place-content-center">
+    <div class="grid grid-cols-12 gap-6 place-content-center max-md:gap-3">
       <?php
       for ($x = 1; $x <= 3; $x++) {
       ?>
-        <div class="card shadow-md py- relative">
+        <div class="card shadow-md relative max-md:!h-56">
           <div class="px-8">
-            <div class="title text-3xl font-bold tracking-tight"><?php echo get_field('service_' . $x . ''); ?></div>
+            <div class="title text-3xl font-bold tracking-tight max-md:text-xl"><?php echo get_field('service_' . $x . ''); ?></div>
             <!-- <div class="learn-more">Learn More</div> -->
           </div>
           <img src="<?php echo get_field('service_image_' . $x . ''); ?>" alt="" class="absolute h-full w-full object-cover rounded-md" style="z-index: -1">
@@ -54,7 +54,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
   </div>
   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wave.png" alt="" class="absolute top-0 left-0 -z-10 h-full w-full">
 </section>
-<section id="services">
+<section id="services" class="max-md:py-20">
   <div id="top-header">
     <div class="container mx-auto">
       <h5>Our Services</h5>

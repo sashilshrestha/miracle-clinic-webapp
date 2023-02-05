@@ -2982,6 +2982,14 @@ jQuery(document).ready(function ($) {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
   $('.stories-slider').slick({
     infinite: true,

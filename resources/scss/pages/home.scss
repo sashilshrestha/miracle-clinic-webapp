@@ -77,6 +77,9 @@
   @apply mt-12 mb-40;
   display: flex;
   justify-content: center;
+  @include set(768) {
+    margin-bottom: 3rem;
+  }
 }
 
 #services {
@@ -237,7 +240,7 @@
         .point {
           @apply col-span-6;
           .icon {
-            @apply w-20 h-20 rounded-full bg-gray-50 border-2 p-2 flex justify-center items-center;
+            @apply w-20 h-20 rounded-full bg-gray-50 p-2 flex justify-center items-center;
             img {
               height: 2.5rem;
             }
@@ -266,10 +269,10 @@
         @include margin(0, 15, 0, 15);
 
         .card {
-          @apply relative rounded-md justify-end items-center p-28;
+          @apply relative rounded-md justify-end items-center p-14;
           @apply flex #{!important};
           // @include width(1394);
-          @include height(440);
+          @include height(380);
 
           &-content {
             @apply flex flex-col items-end text-right;
@@ -378,8 +381,17 @@
           position: absolute;
           top: 300px;
 
+          @include set(768) {
+            position: relative;
+            bottom: 0;
+            top: 100%;
+          }
+
           &.slick-next {
             right: 0;
+            @include set(768) {
+              position: absolute;              
+            }
           }
           &.slick-prev {
             left: 86%;

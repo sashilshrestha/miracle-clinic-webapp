@@ -54,7 +54,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
   </div>
   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wave.png" alt="" class="absolute top-0 left-0 -z-10 h-full w-full">
 </section>
-<section id="services" class="max-md:py-20">
+<section id="services" class="max-md:pt-20">
   <div id="top-header">
     <div class="container mx-auto">
       <h5>Our Services</h5>
@@ -98,48 +98,12 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     <!-- <button class="button primary"><a href="#">View All Services</a></button> -->
   </div>
 </section>
-<!-- <div id="offers" class="hidden">
-  <div id="top-header">
-    <div class="container mx-auto">
-      <h5>Current Offers</h5>
-      <h2>Save money on your treatment</h2>
-    </div>
-  </div>
-  <div class="offers-content">
-    <div class="container mx-auto">
-      <div class="flex flex-wrap gap-6 justify-center">
-        <?php
-        for ($x = 0; $x < 5; $x++) {
-        ?>
-          <div class="card">
-            <div>
-              <h1>Save 15% On</h1>
-              <h2>Acne Scar Removal</h2>
-              <h6>Remove acne to reveal your healthy glow of the skin.
-              </h6>
-            </div>
-            <div>
-              <div class="book-now-icon">
-                <h3>Book Now</h3>
-              </div>
-            </div>
-          </div>
-        <?php
-        }
-        ?>
-      </div>
-    </div>
-  </div>
-  <div id="section-footer">
-    <button class="button primary"><a href="#">View All Offers</a></button>
-  </div>
-</div> -->
-<div id="why" class="mb-20">
-  <div class="why-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/why.jpg" alt="" class="w-full h-full object-cover" style="object-position: 18%"></div>
+<div id="why" class="mb-20 max-md:mb-0">
+  <div class="why-img max-md:hidden"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/why.jpg" alt="" class="w-full h-full object-cover" style="object-position: 18%"></div>
   <div class="container mx-auto">
     <div class="grid grid-cols-12 gap-6 h-full place-content-center">
-      <div class="col-span-4"></div>
-      <div class="col-span-8 why-content">
+      <div class="col-span-4 max-md:hidden"></div>
+      <div class="col-span-8 why-content max-md:col-span-12">
         <div id="top-header">
           <h5>Miracle benefits</h5>
           <h2>Why choose Miracle ?</h2>
@@ -219,14 +183,14 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           </h6>
         </div>
       </div> -->
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team.png" alt="" class="w-full object-contain" style="height: 38rem">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team.png" alt="" class="w-full object-contain n max-md:object-cover max-md:!h-96" style="height: 38rem">
     </div>
   </div>
   <div id="section-footer">
     <button class="button primary"><a href="#">View All Team Member</a></button>
   </div>
 </div>
-<div id="testimonials" class="relative">
+<div id="testimonials" class="relative max-md:mt-20">
   <div id="top-header">
     <div class="container mx-auto">
       <h5>Testimonials</h5>
@@ -235,7 +199,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
   </div>
   <div class="container mx-auto">
     <div class="grid grid-cols-12 testimonial-container gap-6">
-      <div class="testimonial-message six flex flex-col pt-36 relative">
+      <div class="testimonial-message six flex flex-col pt-36 relative max-md:p-0">
         <div class="slider-testimonial">
           <!-- Post Calling Loop Started -->
           <?php
@@ -269,10 +233,10 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           ?>
           <!-- Post Calling Loop Ends -->
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/quote.png" alt="" class="absolute -left-10 top-14" style="z-index: -1">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/quote.png" alt="" class="absolute -left-10 top-14 max-md:left-0 max-md:-top-7 max-md:h-20" style="z-index: -1">
       </div>
       <div class="testimonial-image six">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial.png" alt="" style="height: 687px" class="object-cover">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial.png" alt="" style="height: 687px" class="object-cover max-md:!h-80 max-md:w-full">
       </div>
     </div>
   </div>
@@ -286,24 +250,42 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
       <h6>Transformations that last forever</h6>
     </div>
   </div>
-  <div class="stories-content hidden">
+  <div class="stories-content">
     <div class="stories-slider">
+      <!-- Post Calling Loop Started -->
       <?php
-      for ($x = 0; $x < 5; $x++) {
+      $args = array(
+        'post_type' => 'results',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'order' => 'ASC',
+        'orderby' => 'publish_date',
+      );
+      $resultsposts = new WP_Query($args);
+
+      while ($resultsposts->have_posts()) :
+        $resultsposts->the_post();
+
+        $thumb_id = get_post_thumbnail_id();
+        $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
       ?>
+        <!-- Loop Started -->
         <div class="card">
           <div class="card-content">
             <h6>Date: 28 Oct 2022</h6>
-            <h1>Treatment: Laser Hair Removal Treatment
+            <h1>Treatment: <?php the_title() ?>
             </h1>
             <button class="button italic secondary font-bold tracking-tighter">Learn More</button>
           </div>
           <div class="overlay"></div>
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+          <img src="<?php echo $thumb_url[0] ?>" alt="">
         </div>
+        <!-- Loop Ended -->
       <?php
-      }
+      endwhile;
+      wp_reset_postdata();
       ?>
+      <!-- Post Calling Loop Ends -->
     </div>
   </div>
   <div id="section-footer" class="hidden">

@@ -32,8 +32,8 @@
           <div class="details">
             <div class="mb-6">
               <div class="link-heading">Opening Hours</div>
-              <p>Sunday to Friday: 9am to 7pm</p>
-              <p>Saturday: 11am to 5pm</p>
+              <p>Sunday to Friday: 10am to 7pm</p>
+              <p>Saturday: 12pm to 5pm</p>
             </div>
             <div>
               <div class="link-heading">Follow Us</div>

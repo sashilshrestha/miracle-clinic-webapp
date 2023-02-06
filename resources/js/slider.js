@@ -2987,6 +2987,7 @@ jQuery(document).ready(function ($) {
         breakpoint: 769,
         settings: {
           slidesToShow: 1,
+          arrows: false
         },
       },
     ],

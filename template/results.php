@@ -42,8 +42,8 @@ get_header();
               <div><span class="details-title">Treatment: </span><span class="details-treatment"><?php echo get_field('treatment') ?></span></div>
             </div>
             <div class="read-more">
-              <a href="<?php the_permalink() ?>">Read Testimonial >></a>
-              <span>Date: 28 Oct 2022</span>
+              <a href="<?php the_permalink() ?>">Read Full Story >></a>
+              <span><?php echo get_the_date() ?></span>
             </div>
           </div>
         </div>

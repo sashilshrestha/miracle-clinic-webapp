@@ -45,9 +45,12 @@ function tailpress_enqueue_scripts()
 	wp_enqueue_script('jquery');
 	wp_enqueue_style('tailpress-slider--css-theme', tailpress_asset('resources/css/slider-theme.css'), array(), $theme->get('Version'));
 	wp_enqueue_style('tailpress-slider-css', tailpress_asset('resources/css/slider.css'), array(), $theme->get('Version'));
+	wp_enqueue_style('tailpress-magnific-css', tailpress_asset('resources/css/magnific.css'), array(), $theme->get('Version'));
 	wp_enqueue_style('tailpress', tailpress_asset('css/app.css'), array(), $theme->get('Version'));
 	wp_enqueue_script('tailpress', tailpress_asset('js/app.js'), array(), $theme->get('Version'));
 	wp_enqueue_script('tailpress-slider-js', tailpress_asset('resources/js/slider.js'), array(), $theme->get('Version'));
+	wp_enqueue_script('tailpress-isotope-js', tailpress_asset('resources/js/isotope.js'), array(), $theme->get('Version'));
+	wp_enqueue_script('tailpress-magnific-js', tailpress_asset('resources/js/magnific.js'), array(), $theme->get('Version'));
 }
 
 add_action('wp_enqueue_scripts', 'tailpress_enqueue_scripts');
@@ -294,3 +297,31 @@ add_filter('nav_menu_link_attributes', 'anchor_menu_add_class', 10, 3);
 // ----------------------------- Registering menu -----------------------------
 register_nav_menu('services-menu', __('Services Menu'));
 register_nav_menu('links-menu', __('Links Menu'));
+
+// ----------------------------- Gallery post type -----------------------------
+function gk_custom_gallery()
+{
+	register_post_type('gallery', [
+		'rewrite' => ['slug' => 'gallery'],
+		'labels' => [
+			'name' => 'Gallery',
+			'singular_name' => 'Gallery',
+			'add_new_item' => 'Add New Gallery',
+			'edit_item' => 'Edit Gallery',
+		],
+		'menu_icon' => 'dashicons-format-gallery',
+		'public' => true,
+		'has_archive' => true,
+		'show_in_rest' => true,
+		'menu_position' => 15,
+		'supports' => ['title', 'editor', 'thumbnail', 'page-attributes', 'taxonomy'],
+	]);
+}
+add_action('init', 'gk_custom_gallery');
+
+function add_menu_link_class($atts, $item, $args)
+{
+    $atts['class'] = 'hover:underline';
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);

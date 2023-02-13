@@ -38,8 +38,8 @@ get_header();
           <div class="result-description">
             <div class="name"><?php the_title() ?></div>
             <div class="details">
-              <div><span class="details-title">Concerns: </span><span class="details-treatment">Hair</span></div>
-              <div><span class="details-title">Treatment: </span><span class="details-treatment">Laser Hair Removal</span></div>
+              <div><span class="details-title">Concerns: </span><span class="details-treatment"><?php echo get_field('concerns') ?></span></div>
+              <div><span class="details-title">Treatment: </span><span class="details-treatment"><?php echo get_field('treatment') ?></span></div>
             </div>
             <div class="read-more">
               <a href="<?php the_permalink() ?>">Read Testimonial >></a>

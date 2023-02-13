@@ -2,7 +2,7 @@
   .results-container {
     @apply my-16;
     .result-card {
-      @apply col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center rounded-md cursor-pointer;
+      @apply col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center rounded-md cursor-pointer overflow-hidden;
       @apply h-[22rem] relative hover:shadow-lg transition-all duration-300;
       .result-description {
         @apply absolute top-0 left-0 w-full h-full rounded-md p-8;
@@ -19,7 +19,7 @@
           @apply text-3xl text-primary underline underline-offset-4 font-bold mb-2;
         }
         .details {
-          @apply text-2xl text-white  mb-3;
+          @apply text-xl text-white  mb-3;
           &-title {
             @apply font-bold;
           }
@@ -39,6 +39,9 @@
     }
     .result-card:hover > .result-description {
       opacity: 1;
+    }
+    .result-card:hover > img {
+      transform: scale(1.06);
     }
   }
 }

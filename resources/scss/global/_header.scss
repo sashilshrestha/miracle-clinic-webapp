@@ -65,9 +65,14 @@ header {
                 @include font-size(18);
                 color: $black;
                 font-weight: 500;
+                transition: all 0.2s ease-in-out;
 
                 @include set(555) {
                   @include font-size(36);
+                }
+
+                &:hover {
+                  border-bottom: 2px solid $black;
                 }
               }
 

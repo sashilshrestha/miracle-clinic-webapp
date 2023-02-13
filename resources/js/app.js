@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
     $('#load').addClass('opacity-0 !-z-50');
   }, 500);
   $('.menu-item-has-children').attr('data-dropdown', '');
-  $('.menu-item-has-children > a').attr('data-dropdown-button', '');
+  $('.menu-item-has-children > a').attr('data-dropdown-button', '');  
 });
 
 document.addEventListener('DOMContentLoaded', function () {

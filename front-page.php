@@ -62,36 +62,38 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
       <h6>Get comprehensive aesthetic treatment plans custom designed for you</h6>
     </div>
   </div>
-  <div class="services-content">
-    <div class="services-slider">
-      <!-- Post Calling Loop Started -->
-      <?php
-      $args = array(
-        'taxonomy'   => 'services_category',
-        'hide_empty' => false,
-      );
+  <div class="container mx-auto">
+    <div class="services-content">
+      <div class="services-slider">
+        <!-- Post Calling Loop Started -->
+        <?php
+        $args = array(
+          'taxonomy'   => 'services_category',
+          'hide_empty' => false,
+        );
 
-      $categories = get_terms($args);
-      foreach ($categories as $category) {
-        $category_link = get_category_link($category->term_id);
-        $category_id = $category->term_id;
+        $categories = get_terms($args);
+        foreach ($categories as $category) {
+          $category_link = get_category_link($category->term_id);
+          $category_id = $category->term_id;
 
-        $image = get_field('category_thumbnail', 'category_' . $category_id);
+          $image = get_field('category_thumbnail', 'category_' . $category_id);
 
-      ?>
-        <!-- Loop Started -->
-        <div class="card">
-          <h2><a href="<?php echo esc_url($category_link) ?>"><?php echo $category->name ?></a></h2>
-          <h6><?php echo $category->description ?></h6>
-          <div class="overlay"></div>
-          <img src="<?php echo $image; ?>" alt="" class="absolute top-0 left-0 object-cover h-full w-full
+        ?>
+          <!-- Loop Started -->
+          <div class="card">
+            <h2><a href="<?php echo esc_url($category_link) ?>"><?php echo $category->name ?></a></h2>
+            <h6><?php echo $category->description ?></h6>
+            <div class="overlay"></div>
+            <img src="<?php echo $image; ?>" alt="" class="absolute top-0 left-0 object-cover h-full w-full
           ">
-        </div>
-        <!-- Loop Ended -->
-      <?php
-      }
-      ?>
-      <!-- Post Calling Loop Ends -->
+          </div>
+          <!-- Loop Ended -->
+        <?php
+        }
+        ?>
+        <!-- Post Calling Loop Ends -->
+      </div>
     </div>
   </div>
   <div id="section-footer">
@@ -187,7 +189,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     </div>
   </div>
   <div id="section-footer">
-    <button class="button primary"><a href="#">View All Team Member</a></button>
+    <a href="<?php echo get_site_url(); ?>/our-team"><button class="button primary">View All Team Member</button></a>
   </div>
 </div>
 <div id="testimonials" class="relative max-md:mt-20">
@@ -243,7 +245,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
   <div class="yellow-overlay bg-primary-mid-light absolute top-0 left-0 -z-10" style="width: 55%; height:68%"></div>
 </div>
 <div id="stories">
-  <div id="top-header" class="hidden">
+  <div id="top-header">
     <div class="container mx-auto">
       <h5>Success Stories</h5>
       <h2>Results that transform you</h2>
@@ -272,13 +274,13 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
         <!-- Loop Started -->
         <div class="card">
           <div class="card-content">
-            <h6>Date: 28 Oct 2022</h6>
+            <h6><?php echo get_the_date() ?></h6>
             <h1>Treatment: <?php the_title() ?>
             </h1>
-            <button class="button italic secondary font-bold tracking-tighter">Learn More</button>
+            <a href="<?php the_permalink() ?>" class="result-learn"><button class="button italic secondary font-bold tracking-tighter">Learn More</button></a>
           </div>
           <div class="overlay"></div>
-          <img src="<?php echo $thumb_url[0] ?>" alt="">
+          <img src="<?php echo $thumb_url[0] ?>" alt="" class="result-image">
         </div>
         <!-- Loop Ended -->
       <?php
@@ -289,7 +291,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     </div>
   </div>
   <div id="section-footer" class="hidden">
-    <button class="button primary"><a href="#">View All Services</a></button>
+    <a href="<?php echo get_site_url(); ?>/results-and-stories"><button class="button primary">View All Results</button></a>
   </div>
 </div>
 <div id="blogs">
@@ -338,7 +340,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
     </div>
   </div>
   <div id="section-footer">
-    <button class="button primary"><a href="#">View All Blogs</a></button>
+    <a href="<?php echo get_site_url(); ?>/news"><button class="button primary">View All Blogs</button></a>
   </div>
 </div>
 <div id="map">

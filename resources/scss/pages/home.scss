@@ -87,13 +87,14 @@
     .services-slider.slick-initialized {
       .slick-list {
         &.draggable {
-          padding: 30px !important;
+          // padding: 30px !important;
+          padding-top: 3rem !important;
+          padding-bottom: 3rem !important;
         }
 
         .slick-track {
           .slick-slide {
             @include margin(0, 15, 0, 15);
-            // box-shadow: 0px 4px 25px 0px #00000010;
             transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
             transform: scale(0.95);
 
@@ -134,6 +135,12 @@
             &.slick-current {
               transform: scale(1.05);
             }
+
+            &.slick-center {
+              .card {
+                box-shadow: 0px 4px 25px 0px #00000008;
+              }
+            }
           }
         }
       }
@@ -144,11 +151,11 @@
         @apply w-12 h-12 rounded-full;
 
         &.slick-prev {
-          @apply left-7;
+          @apply -left-7;
         }
 
         &.slick-next {
-          @apply right-7;
+          @apply -right-7;
         }
 
         &:hover {
@@ -240,7 +247,7 @@
         .point {
           @apply col-span-6;
           .icon {
-            @apply w-20 h-20 rounded-full bg-gray-50 p-2 flex justify-center items-center;
+            @apply w-20 h-20 rounded-full bg-gray-100 p-2 flex justify-center items-center;
             img {
               height: 2.5rem;
             }
@@ -269,26 +276,29 @@
         @include margin(0, 15, 0, 15);
 
         .card {
-          @apply relative rounded-md justify-end items-center p-14;
+          @apply relative rounded-md justify-end items-center p-14 overflow-hidden;
           @apply flex #{!important};
           // @include width(1394);
           @include height(380);
 
           &-content {
-            @apply flex flex-col items-end text-right;
+            @apply flex flex-col items-start text-right;
             @include width(500);
             h6 {
               @apply text-primary italic text-lg mb-2;
             }
             h1 {
-              @apply text-white font-extrabold text-5xl mb-4;
+              @apply text-white font-extrabold text-3xl mb-4;
+            }
+            .button:hover {
+              transform: scale(1.06);
             }
           }
 
           .overlay {
             @apply absolute top-0 left-0 w-full h-full;
             background: linear-gradient(
-              90deg,
+              270deg,
               rgba(35, 31, 32, 0.4) 0%,
               #231f20 100%
             );
@@ -390,7 +400,7 @@
           &.slick-next {
             right: 0;
             @include set(768) {
-              position: absolute;              
+              position: absolute;
             }
           }
           &.slick-prev {

@@ -74,19 +74,21 @@
   margin-top: 1.5rem;
   .grid {
     .card {
-      @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4 rounded-lg border border-gray-200 transition-all duration-300;
+      @apply col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4 rounded-lg border border-gray-200 transition-all duration-300 flex flex-col;
       &:hover {
         box-shadow: 0px 4px 25px 0px #00000010;
       }
       img {
         @apply rounded-lg rounded-br-none rounded-bl-none;
-        height: 18rem;
+        max-height: 16rem;
+        height: 100%;
         width: 100%;
         object-fit: cover;
       }
 
       &-content {
-        @apply p-4;
+        @apply p-4 flex flex-col justify-between;
+        height: -webkit-fill-available;
         h4 {
           @apply text-2xl font-bold mb-3 tracking-tight;
           line-height: 140%;

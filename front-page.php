@@ -96,7 +96,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
       </div>
     </div>
   </div>
-  <div id="section-footer">
+  <div id="section-footer" class="!mb-20">
     <!-- <button class="button primary"><a href="#">View All Services</a></button> -->
   </div>
 </section>

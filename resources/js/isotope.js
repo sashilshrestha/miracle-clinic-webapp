@@ -1827,10 +1827,10 @@ jQuery(document).ready(function ($) {
     },
   });
 
-  let currentURL = window.location.href.substr(-8);
+  let currentURL = window.location.href.substr(-13);
 
-  if (currentURL === 'gallery/') {
+  if (currentURL === 'gallery-page/') {
     window.location = window.location + '#loaded';
-    $(window).trigger('resize');
+    location.reload();
   }
 });

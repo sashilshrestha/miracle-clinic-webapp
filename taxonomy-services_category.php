@@ -9,7 +9,7 @@ foreach ($terms as $term) {
 <header class="page--header relative !pb-40 !pt-52">
   <div class="container mx-auto">
     <img src="<?php echo $image; ?>" alt="" class="absolute top-0 left-0 w-full h-full object-cover  opacity-20">
-    <h1 class="z-10"><?php single_term_title(); ?></h1>
+    <h1 style="z-index: 8"><?php single_term_title(); ?></h1>
   </div>
 </header>
 <main class="container mx-auto">

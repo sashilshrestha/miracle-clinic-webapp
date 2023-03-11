@@ -71,8 +71,9 @@ get_header();
             <div class="card ">
               <img src="<?php echo $thumb_url[0] ?>" alt="">
               <div class="card-content">
-                <h4><?php the_title() ?></h4>
-                <p>Get Insights, Information and Care Tips about Skin Hair and Aesthetic Delivered Unsubscribe at any time...</p>
+                <div>
+                  <h4><?php the_title() ?></h4>
+                </div>
                 <div class="readmore">
                   <a href="<?php the_permalink(); ?>">Read Full Article >></a>
                   <span>Mar 10, 2022</span>

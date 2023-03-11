@@ -1,18 +1,29 @@
 #about-page {
   .intro {
     @apply my-16;
+
     h1 {
       @apply text-5xl underline underline-offset-4 mb-6 pl-20;
       color: $dark;
+
+      @include set(768) {
+        @apply text-4xl mx-0 p-0 text-center;
+      }
     }
     p {
       @apply text-3xl w-7/12 pl-32;
+      @include set(768) {
+        @apply text-2xl p-0 w-full text-center;
+      }
     }
     .hero-img {
       z-index: -1;
       right: 0;
       top: 0;
       height: 100%;
+      @include set(768) {
+        display: none;
+      }
 
       &:before {
         content: '';
@@ -37,6 +48,10 @@
     p {
       @apply text-center text-2xl mx-44;
       line-height: 145%;
+
+      @include set(768) {
+        @apply mx-0;
+      }
     }
     img.img-overlay {
       position: absolute;
@@ -44,6 +59,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
   #why {

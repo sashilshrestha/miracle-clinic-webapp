@@ -7,7 +7,7 @@
 <main id="about-page">
   <section class="intro">
     <div class="container mx-auto relative">
-      <div class="py-40">
+      <div class="py-20 md:py-40">
         <h1>For trusted derma care</h1>
         <p>Our mission is to provide quality derma care and aesthetic services to our clients using the latest technology.
         </p>
@@ -30,7 +30,7 @@
       <div class="py-32">
         <h3 class="text-secondary text-3xl text-center">But, Why Us ?</h3>
         <h2 class="text-primary-dark text-4xl font-bold text-center mb-16">It’s a bit about us, and more about you</h2>
-        <div class="grid grid-cols-2 gap-40 mb-28 relative">
+        <div class="grid grid-cols-2 gap-40 mb-28 relative max-md:grid-cols-1 max-md:gap-10 max-md:mb-10">
           <div class="px-6 py-6 flex flex-col justify-center rounded-md bg-primary-light hover:scale-105 ss-cards border-yellow-400 border">
             <h4 class="text-3xl font-bold text-hdtext mb-2">Our Values</h4>
             <p class="text-base text-text">Our values guide how we operate as a team and provide customer service.</p>
@@ -39,21 +39,21 @@
             <h4 class="text-3xl font-bold text-hdtext mb-2 text-right">People First</h4>
             <p class="text-base text-text text-right">Weather it’s our customers or our team, our utmost priority is people over everything else.</p>
           </div>
-          <div class="absolute left-1/2 -translate-x-1/2 top-2/3 w-64 h-64" style="z-index: 1;">
+          <div class="absolute left-1/2 -translate-x-1/2 top-2/3 w-64 h-64 max-md:hidden" style="z-index: 1;">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" alt="" class="object-cover h-full max-w-fit relative w-full -top-4" style="border: 1.5rem solid white; border-radius: 999px">
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-20">
-          <div class="flex justify-end">
-            <div class="px-6 py-6 flex flex-col justify-center rounded-md bg-primary-light hover:scale-105 w-[480px] ss-cards border-yellow-400 border">
+        <div class="grid grid-cols-2 gap-20 max-md:grid-cols-1 max-md:gap-10">
+          <div class="flex justify-end ">
+            <div class="px-6 py-6 flex flex-col justify-center rounded-md bg-primary-light hover:scale-105 w-[480px] ss-cards border-yellow-400 border max-md:w-full">
               <h4 class="text-3xl font-bold text-hdtext mb-2">Empathy
               </h4>
               <p class="text-base text-text">We encourage empathy alongside more human-to-human communication for a stronger team and happier customers.
               </p>
             </div>
           </div>
-          <div class="flex">
-            <div class="px-6 py-6 flex flex-col justify-center rounded-md bg-primary-light hover:scale-105 w-[480px] ss-cards border-yellow-400 border">
+          <div class="flex  ">
+            <div class="px-6 py-6 flex flex-col justify-center rounded-md bg-primary-light hover:scale-105 w-[480px] ss-cards border-yellow-400 border max-md:w-full">
               <h4 class="text-3xl font-bold text-hdtext mb-2 text-right">Quality</h4>
               <p class="text-base text-text text-right">We strive to be the best at our craft and knowledge to provide the best quality service to our customers.
               </p>

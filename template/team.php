@@ -48,6 +48,7 @@ get_header();
                 <p><?php the_excerpt() ?></p>
                 <h1 class="!mt-2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                 <?php echo get_field('team_designation') ?>
+                <a href="<?php the_permalink(); ?>" class="text-sm underline underline-offset-4">View Profile</a>
               </div>
             </div>
             <!-- Loop Ended -->
